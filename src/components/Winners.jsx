@@ -16,9 +16,9 @@ const WinnerCard = ({ winner, idx }) => {
       
       {/* Hover Slide-up Panel (matching video) */}
       <div className="absolute inset-0 bg-[#0C233C]/90 backdrop-blur-sm translate-y-full group-hover:translate-y-0 transition-transform duration-500 flex flex-col justify-center p-6 text-left">
-        <p className="text-[#1E49E2] text-[10px] font-black uppercase tracking-widest mb-2">{winner.award}</p>
-        <h3 className="text-white text-xl font-black tracking-tight mb-1">{winner.name}</h3>
-        <p className="text-white/40 text-[11px] font-bold uppercase tracking-widest">{winner.team}</p>
+        <p className="text-[#1E49E2] text-[10px] font-bold uppercase tracking-widest mb-2">{winner.award}</p>
+        <h3 className="text-white text-xl font-semibold tracking-tight mb-1">{winner.name}</h3>
+        <p className="text-white/40 text-[11px] font-normal uppercase tracking-widest">{winner.team}</p>
       </div>
 
       {/* Trophy Badge (always visible) */}
@@ -46,11 +46,11 @@ const Winners = () => {
             initial={{ opacity: 0, y: 10 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-[11px] font-black uppercase tracking-[0.3em] mb-4 text-[#1E49E2]"
+            className="text-[11px] font-bold uppercase tracking-[0.3em] mb-4 text-[#1E49E2]"
           >
             {winners.badge}
           </motion.p>
-          <motion.h2 className="gsap-reveal text-4xl md:text-5xl font-black text-[#0C233C] tracking-tighter mb-6">
+          <motion.h2 className="gsap-reveal text-4xl md:text-5xl font-semibold text-[#0C233C] tracking-tighter mb-6">
             {winners.title}
           </motion.h2>
 
@@ -60,7 +60,7 @@ const Winners = () => {
               <button
                 key={year}
                 onClick={() => setActiveYear(year)}
-                className={`px-6 py-2.5 rounded-lg text-xs font-black uppercase tracking-widest transition-all ${
+                className={`px-6 py-2.5 rounded-lg text-xs font-bold uppercase tracking-widest transition-all ${
                   activeYear === year 
                   ? 'bg-[#1E49E2] text-white shadow-lg' 
                   : 'text-[#0C233C]/40 hover:text-[#0C233C]'

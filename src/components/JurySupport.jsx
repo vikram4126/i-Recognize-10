@@ -18,10 +18,10 @@ const MemberCard = ({ member, idx }) => (
     
     {/* Identity */}
     <div className="flex flex-col min-w-0 px-2">
-      <p className="text-[16px] md:text-[18px] font-black text-white tracking-tight leading-tight uppercase mb-1 group-hover:text-[#0C233C] transition-colors duration-300">
+      <p className="text-[16px] md:text-[18px] font-semibold text-white tracking-tight leading-tight uppercase mb-1 group-hover:text-[#0C233C] transition-colors duration-300">
         {member.name}
       </p>
-      <p className="text-[11px] font-medium text-white/40 tracking-wide leading-tight group-hover:text-[#0C233C]/70 transition-colors duration-300">
+      <p className="text-[11px] font-normal text-white/40 tracking-wide leading-tight group-hover:text-[#0C233C]/70 transition-colors duration-300">
         {member.role || member.dpt || member.designation}
       </p>
     </div>
@@ -41,12 +41,12 @@ const JurySupport = () => {
             initial={{ opacity: 0, y: 10 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-[11px] font-black uppercase tracking-[0.3em] mb-4 text-[#1E49E2]"
+            className="text-[11px] font-bold uppercase tracking-[0.3em] mb-4 text-[#1E49E2]"
           >
             {support.badge}
           </motion.p>
           <motion.h2
-            className="gsap-reveal text-4xl md:text-5xl font-black text-[#0C233C] tracking-tighter mb-6"
+            className="gsap-reveal text-4xl md:text-5xl font-semibold text-[#0C233C] tracking-tighter mb-6"
           >
             {support.title}
           </motion.h2>
@@ -65,7 +65,7 @@ const JurySupport = () => {
               <div className="w-10 h-10 bg-[#1E49E2] rounded-full flex items-center justify-center text-white shadow-lg shadow-[#1E49E2]/20">
                 <Gavel size={18} />
               </div>
-              <h3 className="text-lg font-black text-[#0C233C] tracking-tight uppercase">
+              <h3 className="text-lg font-semibold text-[#0C233C] tracking-tight uppercase">
                 {support.juryTitle}
               </h3>
             </div>

@@ -1,12 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,700;1,800;1,900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Open+Sans+Condensed:wght@700&display=swap');
 @import "tailwindcss";
-
-@font-face {
-  font-family: 'KPMG-Display';
-  src: url('./assets/fonts/KPMG-Display.woff2') format('woff2');
-  font-weight: normal;
-  font-style: normal;
-}
 
 @theme {
   --color-primary:          #00338D;
@@ -19,9 +12,8 @@
   --color-surface:          #F5F7FA;
   --color-white:            #FFFFFF;
 
-  --font-sans:     'Inter', sans-serif;
-  --font-display:  'KPMG-Display', sans-serif;
-  --font-opensans: 'Open Sans', sans-serif;
+  --font-sans:      'Open Sans', sans-serif;
+  --font-condensed: 'Open Sans Condensed', sans-serif;
 
   --background-image-gradient-corporate: linear-gradient(135deg, #00338D 0%, #1E49E2 100%);
   --background-image-gradient-accent:    linear-gradient(135deg, #7213EA 0%, #FD349C 100%);
@@ -47,18 +39,13 @@
   }
 
   body {
-    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    font-family: var(--font-sans);
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     background-color: #00338D;
     color: #00338D;
     overflow-x: hidden;
   }
-}
-
-/* KPMG Display Font Utility */
-.font-display {
-  font-family: 'KPMG-Display', sans-serif;
 }
 
 /* Base text color for light sections */

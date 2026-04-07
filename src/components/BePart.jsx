@@ -21,7 +21,7 @@ const BePart = () => {
             initial={{ opacity: 0, y: 10 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-[11px] font-black uppercase tracking-[0.3em] mb-4 text-[#ACEAFF]"
+            className="text-[11px] font-bold uppercase tracking-[0.3em] mb-4 text-[#ACEAFF]"
           >
             {bepart.badge}
           </motion.p>
@@ -29,7 +29,7 @@ const BePart = () => {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="gsap-reveal text-4xl md:text-5xl font-black text-white tracking-tighter mb-6"
+            className="gsap-reveal text-4xl md:text-5xl font-semibold text-white tracking-tighter mb-6"
           >
             {bepart.title}
           </motion.h2>
@@ -41,13 +41,13 @@ const BePart = () => {
            whileInView={{ opacity: 1, y: 0 }}
            viewport={{ once: true }}
            transition={{ delay: 0.1 }}
-           className="max-w-2xl mx-auto text-white/60 font-medium text-sm md:text-base leading-relaxed"
+           className="max-w-2xl mx-auto text-white/60 font-normal text-sm md:text-base leading-relaxed"
         >
           <p className="mb-4">
             {bepart.description}
           </p>
           <p className="text-white/90">
-             Connect with your <a href="#support" className="text-[#1E49E2] border-b border-[#1E49E2]/30 hover:border-[#1E49E2] transition-all font-black">Team SPOC</a> and take part in a shared journey of showcasing, learning, and recognition.
+             Connect with your <a href="#support" className="text-[#1E49E2] border-b border-[#1E49E2]/30 hover:border-[#1E49E2] transition-all font-bold">Team SPOC</a> and take part in a shared journey of showcasing, learning, and recognition.
           </p>
         </motion.div>
 

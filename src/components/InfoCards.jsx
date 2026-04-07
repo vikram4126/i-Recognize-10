@@ -29,10 +29,10 @@ const InfoCards = () => {
             }}
           >
             <div>
-              <h3 className="text-xl font-black text-white mb-4 leading-tight group-hover:text-[#ACEAFF] transition-colors uppercase tracking-tight">
+              <h3 className="text-xl font-semibold text-white mb-4 leading-tight group-hover:text-[#ACEAFF] transition-colors uppercase tracking-tight">
                 {card.title}
               </h3>
-              <p className="text-white/60 leading-relaxed mb-8 text-sm font-medium">
+              <p className="text-white/60 leading-relaxed mb-8 text-sm font-normal">
                 {card.text}
               </p>
             </div>

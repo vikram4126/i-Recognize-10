@@ -17,7 +17,7 @@ const PreviousEditions = () => {
             initial={{ opacity: 0, y: 10 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-[11px] font-black uppercase tracking-[0.3em] mb-4 text-[#1E49E2]"
+            className="text-[11px] font-bold uppercase tracking-[0.3em] mb-4 text-[#1E49E2]"
           >
             {archival.badge}
           </motion.p>
@@ -25,7 +25,7 @@ const PreviousEditions = () => {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="gsap-reveal text-4xl md:text-5xl font-black text-[#0C233C] tracking-tighter mb-6"
+            className="gsap-reveal text-4xl md:text-5xl font-semibold text-[#0C233C] tracking-tighter mb-6"
           >
             {archival.title}
           </motion.h2>
@@ -39,10 +39,10 @@ const PreviousEditions = () => {
               onClick={() => setSelectedEdition(edition)}
               className="group cursor-pointer flex flex-col items-center"
             >
-              <h3 className="text-6xl md:text-8xl font-black text-[#0C233C]/5 group-hover:text-[#1E49E2] transition-all duration-500 scale-90 group-hover:scale-100">
+              <h3 className="text-6xl md:text-8xl font-bold text-[#0C233C]/5 group-hover:text-[#1E49E2] transition-all duration-500 scale-90 group-hover:scale-100">
                 {edition.year}
               </h3>
-              <p className="mt-4 text-[#1E49E2] text-[10px] font-black uppercase tracking-widest opacity-0 group-hover:opacity-100 transition-all">
+              <p className="mt-4 text-[#1E49E2] text-[10px] font-bold uppercase tracking-widest opacity-0 group-hover:opacity-100 transition-all">
                 {edition.title}
               </p>
             </motion.div>
@@ -71,17 +71,17 @@ const PreviousEditions = () => {
                 <img src={selectedEdition.img} alt={selectedEdition.year} className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700" />
               </div>
               <div className="p-10 md:p-16 flex flex-col justify-center text-left">
-                <span className="text-[#1E49E2] text-[10px] font-black uppercase tracking-widest mb-4 italic">Edition Archive</span>
-                <h2 className="text-4xl font-black text-[#0C233C] mb-2 tracking-tight">{selectedEdition.year}</h2>
-                <p className="text-[#1E49E2] font-black text-lg mb-6">{selectedEdition.title}</p>
-                <p className="text-[#0C233C]/60 text-sm font-medium leading-relaxed mb-10">
+                <span className="text-[#1E49E2] text-[10px] font-bold uppercase tracking-widest mb-4 italic">Edition Archive</span>
+                <h2 className="text-4xl font-semibold text-[#0C233C] mb-2 tracking-tight">{selectedEdition.year}</h2>
+                <p className="text-[#1E49E2] font-bold text-lg mb-6">{selectedEdition.title}</p>
+                <p className="text-[#0C233C]/60 text-sm font-normal leading-relaxed mb-10">
                   Relive the moments of brilliance that have defined our legacy over the years through the stories of excellence.
                 </p>
                 <a 
                   href={selectedEdition.link} 
                   target="_blank" 
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-3 px-8 py-4 bg-[#1E49E2] text-white rounded-full font-black text-[11px] uppercase tracking-widest hover:bg-[#0C233C] shadow-xl transition-all"
+                  className="inline-flex items-center gap-3 px-8 py-4 bg-[#1E49E2] text-white rounded-full font-bold text-[11px] uppercase tracking-widest hover:bg-[#0C233C] shadow-xl transition-all"
                 >
                   {archival.cta} <ExternalLink size={14} />
                 </a>

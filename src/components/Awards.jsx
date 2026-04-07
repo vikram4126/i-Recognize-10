@@ -35,7 +35,7 @@ const AwardCard = ({ category, idx }) => {
       className="group relative bg-white/5 backdrop-blur-xl border border-white/10 rounded-3xl p-8 hover:bg-white/10 transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_20px_50px_rgba(0,0,0,0.3)] overflow-hidden flex flex-col h-full"
     >
       {/* Large Backdrop Number — Top-right, slightly outside */}
-      <div className="absolute -top-4 -right-1 text-[100px] font-black text-white/[0.08] leading-none select-none group-hover:text-white/[0.15] transition-colors duration-500 pointer-events-none">
+      <div className="absolute -top-4 -right-1 text-[100px] font-bold text-white/[0.08] leading-none select-none group-hover:text-white/[0.15] transition-colors duration-500 pointer-events-none">
         {String(idx + 1).padStart(2, '0')}
       </div>
 
@@ -45,11 +45,11 @@ const AwardCard = ({ category, idx }) => {
           <Icon size={20} strokeWidth={2.5} />
         </div>
         
-        <h3 className="text-xl font-display font-black text-white mb-4 tracking-tight uppercase leading-tight group-hover:text-[#ACEAFF] transition-colors">
+        <h3 className="text-xl font-semibold text-white mb-4 tracking-tight uppercase leading-tight group-hover:text-[#ACEAFF] transition-colors">
           {category.title}
         </h3>
         
-        <p className="text-sm font-medium text-white/50 leading-relaxed group-hover:text-white/70 transition-colors">
+        <p className="text-sm font-normal text-white/50 leading-relaxed group-hover:text-white/70 transition-colors">
           {category.text}
         </p>
       </div>
@@ -73,7 +73,7 @@ const Awards = () => {
             initial={{ opacity: 0, y: 10 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-[11px] font-black uppercase tracking-[0.3em] mb-4 text-[#ACEAFF]"
+            className="text-[11px] font-bold uppercase tracking-[0.3em] mb-4 text-[#ACEAFF]"
           >
             {awards.badge}
           </motion.p>
@@ -82,7 +82,7 @@ const Awards = () => {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-4xl md:text-5xl font-black text-white tracking-tighter mb-6"
+            className="text-4xl md:text-5xl font-semibold text-white tracking-tighter mb-6"
           >
             {awards.title}
           </motion.h2>
@@ -92,7 +92,7 @@ const Awards = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.1 }}
-            className="text-white/50 max-w-2xl mx-auto text-sm md:text-base font-medium leading-relaxed"
+            className="text-white/50 max-w-2xl mx-auto text-sm md:text-base font-normal leading-relaxed"
           >
             {awards.subtitle}
           </motion.p>

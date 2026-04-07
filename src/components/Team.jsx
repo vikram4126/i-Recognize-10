@@ -15,16 +15,16 @@ const Team = () => {
             initial={{ opacity: 0, y: 10 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-[11px] font-black uppercase tracking-[0.3em] mb-4 text-[#1E49E2]"
+            className="text-[11px] font-bold uppercase tracking-[0.3em] mb-4 text-[#1E49E2]"
           >
             {team.badge}
           </motion.p>
           <motion.h2
-            className="gsap-reveal text-4xl md:text-5xl font-black text-[#0C233C] tracking-tighter mb-6"
+            className="gsap-reveal text-4xl md:text-5xl font-semibold text-[#0C233C] tracking-tighter mb-6"
           >
             {team.title}
           </motion.h2>
-          <p className="max-w-2xl mx-auto text-[#0C233C]/60 text-sm md:text-base font-medium leading-relaxed">
+          <p className="max-w-2xl mx-auto text-[#0C233C]/60 text-sm md:text-base font-normal leading-relaxed">
             {team.description}
           </p>
         </div>
@@ -45,7 +45,7 @@ const Team = () => {
                 <div className="w-24 h-24 mb-6 rounded-full overflow-hidden border border-[#0C233C]/5 shadow-sm group-hover:scale-105 transition-transform">
                   <img src={member.img} alt={member.name} className="w-full h-full object-cover filter grayscale" />
                 </div>
-                <h3 className="text-[15px] font-black text-[#0C233C] leading-none mb-2">{member.name}</h3>
+                <h3 className="text-[15px] font-semibold text-[#0C233C] leading-none mb-2">{member.name}</h3>
                 <p className="text-[10px] font-bold text-[#1E49E2] uppercase tracking-widest">{member.role || member.dpt}</p>
               </motion.div>
             ))}

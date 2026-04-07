@@ -44,18 +44,18 @@ const Hero = () => {
     const ctx = gsap.context(() => {
       gsap.fromTo(cardsRef.current, 
         { 
-          y: 400, 
+          y: 100, 
           opacity: 0 
         }, 
         {
           y: 0,
           opacity: 1,
-          ease: "none",
+          duration: 1.2,
+          ease: "power4.out",
           scrollTrigger: {
-            trigger: bannerRef.current,
-            start: "top top",
-            end: "bottom bottom",
-            scrub: 1,
+            trigger: cardsRef.current,
+            start: "top 90%",
+            toggleActions: "play none none none",
           }
         }
       )
@@ -74,6 +74,7 @@ const Hero = () => {
     >
         <div className="absolute inset-0 z-0 overflow-hidden">
           <video 
+            key={hero.videoUrl}
             autoPlay 
             loop 
             muted 
@@ -95,7 +96,7 @@ const Hero = () => {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-              className="text-5xl md:text-7xl lg:text-8xl font-opensans font-black tracking-tighter text-white leading-[0.9] drop-shadow-2xl"
+              className="text-5xl md:text-7xl lg:text-9xl font-condensed font-bold tracking-tight text-white leading-[0.9] drop-shadow-2xl"
             >
               {hero.title}
             </motion.h1>
@@ -105,7 +106,7 @@ const Hero = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
-              className="text-base md:text-lg text-white/70 max-w-2xl mx-auto font-medium leading-relaxed tracking-wide"
+              className="text-base md:text-lg text-white/70 max-w-2xl mx-auto font-normal leading-relaxed tracking-wide"
             >
               {hero.subtitle}
             </motion.p>

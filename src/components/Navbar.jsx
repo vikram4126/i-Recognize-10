@@ -48,14 +48,19 @@ const Navbar = () => {
             onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
           >
             <div className="relative flex items-center gap-5">
-              <img src={globals.logoUrl} alt="KPMG" className="h-8 w-auto relative z-10" />
+              <img 
+                src={globals.logoUrl} 
+                alt="KPMG" 
+                className="h-8 w-auto relative z-10" 
+                onError={(e) => console.error("Logo failed to load:", e.target.src)}
+              />
               <div className="absolute inset-0 bg-[#ACEAFF]/20 blur-md rounded-full scale-0 group-hover:scale-150 transition-transform duration-500" />
             </div>
           </motion.div>
 
           {/* Action Buttons & Burger */}
           <div className="flex items-center gap-4">
-            <button className="hidden xl:block px-8 py-3 bg-white/5 backdrop-blur-md border border-[#ACEAFF]/30 hover:border-[#ACEAFF] text-white rounded-full text-[10px] font-black uppercase tracking-[0.2em] transition-all hover:shadow-[0_0_20px_rgba(172,234,255,0.3)] active:scale-95 whitespace-nowrap">
+            <button className="hidden xl:block px-8 py-3 bg-white/5 backdrop-blur-md border border-[#ACEAFF]/30 hover:border-[#ACEAFF] text-white rounded-full text-[10px] font-bold uppercase tracking-[0.2em] transition-all hover:shadow-[0_0_20px_rgba(172,234,255,0.3)] active:scale-95 whitespace-nowrap">
               {globals.nominationCta}
             </button>
             <button
@@ -91,7 +96,7 @@ const Navbar = () => {
             >
               <div className="flex justify-between items-center mb-10 shrink-0">
                 <div className="flex items-center gap-3">
-                  <span className="text-xl font-black text-white uppercase tracking-[0.2em]">{globals.menuTitle}</span>
+                  <span className="text-xl font-semibold text-white uppercase tracking-[0.2em]">{globals.menuTitle}</span>
                 </div>
                 <button onClick={toggleMenu} className="p-3 bg-white/5 hover:bg-white/10 rounded-full transition-all group">
                   <X size={24} className="text-white group-hover:rotate-90 transition-transform duration-300" />
@@ -126,7 +131,7 @@ const Navbar = () => {
               </div>
 
               <div className="mt-8 pt-8 border-t border-white/10 shrink-0">
-                <button className="w-full py-5 bg-white/5 backdrop-blur-md border border-[#ACEAFF]/30 hover:border-[#1E49E2] text-white rounded-2xl font-black uppercase tracking-[0.3em] transition-all hover:shadow-[0_0_30px_rgba(172,234,255,0.4)] active:scale-95 text-[11px]">
+                <button className="w-full py-5 bg-white/5 backdrop-blur-md border border-[#ACEAFF]/30 hover:border-[#1E49E2] text-white rounded-2xl font-bold uppercase tracking-[0.3em] transition-all hover:shadow-[0_0_30px_rgba(172,234,255,0.4)] active:scale-95 text-[11px]">
                   {globals.nominationCta}
                 </button>
                 <div className="flex items-center justify-center gap-6 mt-8 opacity-40">
