@@ -24,7 +24,7 @@ const Step = ({ step, idx }) => {
             exit={{ opacity: 0, y: 5, scale: 0.95 }}
             className="absolute -top-16 left-1/2 -translate-x-1/2 z-30 w-48 p-3 bg-[#0C233C] text-white rounded-2xl shadow-2xl text-center pointer-events-none border border-white/10"
           >
-            <p className="text-[13px] font-medium leading-relaxed opacity-90">{step.desc}</p>
+            <p className="text-[12px] font-medium leading-relaxed opacity-90">{step.desc}</p>
             <div className="absolute top-full left-1/2 -translate-x-1/2 w-0 h-0 border-l-[6px] border-l-transparent border-r-[6px] border-r-transparent border-t-[6px] border-t-[#0C233C]" />
           </motion.div>
         )}
@@ -37,13 +37,13 @@ const Step = ({ step, idx }) => {
 
       {/* Step Number Circle */}
       <div className="w-14 h-14 rounded-full bg-white border-2 border-[#0C233C]/10 flex flex-col items-center justify-center text-[#0C233C] mb-8 group-hover:bg-[#1E49E2] group-hover:border-[#1E49E2] group-hover:text-white transition-all shadow-sm z-10 cursor-pointer">
-        <span className="text-xs font-black uppercase leading-none mb-0.5">0{step.id}</span>
+        <span className="text-[10px] font-black uppercase leading-none mb-0.5">0{step.id}</span>
       </div>
 
       {/* Info */}
       <div className="text-center px-4">
-        <h3 className="text-lg font-black text-[#0C233C] mb-2 tracking-tight uppercase leading-none">{step.title}</h3>
-        <p className="text-[12px] font-bold text-[#1E49E2] uppercase tracking-[0.2em]">{step.day}</p>
+        <h3 className="text-[15px] font-black text-[#0C233C] mb-2 tracking-tight uppercase leading-none">{step.title}</h3>
+        <p className="text-[11px] font-bold text-[#1E49E2] uppercase tracking-[0.2em]">{step.day}</p>
       </div>
     </motion.div>
   )

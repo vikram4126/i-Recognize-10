@@ -16,7 +16,7 @@ const WinnerCard = ({ winner, idx }) => {
       
       {/* Hover Slide-up Panel (matching video) */}
       <div className="absolute inset-0 bg-[#0C233C]/90 backdrop-blur-sm translate-y-full group-hover:translate-y-0 transition-transform duration-500 flex flex-col justify-center p-6 text-left">
-        <p className="text-white text-[10px] font-black uppercase tracking-widest mb-2 opacity-80">{winner.award}</p>
+        <p className="text-[#1E49E2] text-[10px] font-black uppercase tracking-widest mb-2">{winner.award}</p>
         <h3 className="text-white text-xl font-black tracking-tight mb-1">{winner.name}</h3>
         <p className="text-white/40 text-[11px] font-bold uppercase tracking-widest">{winner.team}</p>
       </div>
