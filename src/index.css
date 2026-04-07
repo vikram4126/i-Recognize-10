@@ -108,3 +108,47 @@ section {
 ::-webkit-scrollbar-track { background: #F5F7FA; }
 ::-webkit-scrollbar-thumb { background: rgba(0, 51, 141, 0.2); border-radius: 9999px; }
 ::-webkit-scrollbar-thumb:hover { background: rgba(0, 51, 141, 0.4); }
+
+/* Premium Micro-Interactions */
+@keyframes shimmerSweep {
+  0% { transform: translateX(-150%) skewX(-15deg); }
+  100% { transform: translateX(150%) skewX(-15deg); }
+}
+
+.shimmer-sweep {
+  position: relative;
+  overflow: hidden;
+}
+
+.shimmer-sweep::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 150%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(255, 255, 255, 0.3) 50%,
+    transparent 100%
+  );
+  transform: translateX(-150%) skewX(-15deg);
+  transition: opacity 0.3s;
+  pointer-events: none;
+  opacity: 0;
+}
+
+.shimmer-sweep:hover::after {
+  opacity: 1;
+  animation: shimmerSweep 1s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+.glow-pulse-card {
+  transition: all 0.4s ease;
+}
+
+.glow-pulse-card:hover {
+  box-shadow: 0 0 30px rgba(253, 52, 156, 0.15), 0 0 10px rgba(0, 184, 245, 0.15);
+  transform: translateY(-4px);
+}

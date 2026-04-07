@@ -15,8 +15,8 @@ const Step = ({ step, idx }) => {
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
-      {/* Tooltip Popup */}
-      <AnimatePresence>
+      {/* Tooltip Popup (Disabled for now) */}
+      {/* <AnimatePresence>
         {isHovered && (
           <motion.div
             initial={{ opacity: 0, y: 10, scale: 0.95 }}
@@ -28,7 +28,7 @@ const Step = ({ step, idx }) => {
             <div className="absolute top-full left-1/2 -translate-x-1/2 w-0 h-0 border-l-[6px] border-l-transparent border-r-[6px] border-r-transparent border-t-[6px] border-t-[#0C233C]" />
           </motion.div>
         )}
-      </AnimatePresence>
+      </AnimatePresence> */}
 
       {/* Connector Bar (only for middle items) */}
       {idx < 6 && (

@@ -4,6 +4,8 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import Navbar from './components/Navbar'
 import Hero from './components/Hero'
 import SectionIntro from './components/SectionIntro'
+import AmbientParticles from './components/AmbientParticles'
+import EtherealSpline from './components/EtherealSpline'
 
 import Awards from './components/Awards'
 import Team from './components/Team'
@@ -37,6 +39,8 @@ function App() {
 
   return (
     <div className="min-h-screen bg-white">
+      <AmbientParticles />
+      <EtherealSpline />
       <Navbar />
       <main>
         <Hero />
@@ -46,8 +50,8 @@ function App() {
         <Team />
         <Timeline />
         <JurySupport />
-        <PreviousEditions />
-        <Winners />
+        {/* <PreviousEditions /> */}
+        {/* <Winners /> */}
         <BePart />
       </main>
       <Footer />

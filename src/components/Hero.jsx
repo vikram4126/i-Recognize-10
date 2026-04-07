@@ -12,6 +12,7 @@ const Hero = () => {
   const targetDate = new Date(hero.targetDate).getTime()
   const bannerRef = useRef(null)
   const cardsRef = useRef(null)
+  const videoRef = useRef(null)
 
   const [timeLeft, setTimeLeft] = useState({
     days: 0,
@@ -74,6 +75,7 @@ const Hero = () => {
     >
         <div className="absolute inset-0 z-0 overflow-hidden">
           <video 
+            ref={videoRef}
             key={hero.videoUrl}
             autoPlay 
             loop 
@@ -144,10 +146,10 @@ const Hero = () => {
               transition={{ duration: 0.8, delay: 0.7 }}
               className="flex flex-col sm:flex-row items-center justify-center gap-4 mt-2 mb-6"
             >
-              <button className="px-8 py-3.5 bg-gradient-to-r from-[#FD349C] to-[#7213EA] text-white font-medium rounded-full shadow-[0_0_20px_rgba(253,52,156,0.3)] hover:shadow-[0_0_30px_rgba(253,52,156,0.5)] hover:-translate-y-0.5 transition-all duration-300">
+              <button className="shimmer-sweep px-8 py-3.5 bg-gradient-to-r from-[#FD349C] to-[#7213EA] text-white font-medium rounded-full shadow-[0_0_20px_rgba(253,52,156,0.3)] hover:shadow-[0_0_30px_rgba(253,52,156,0.5)] hover:-translate-y-0.5 transition-all duration-300">
                 Inside I-Recognize
               </button>
-              <button className="px-8 py-3.5 bg-white/5 backdrop-blur-sm border border-white/20 text-white font-medium rounded-full hover:bg-white/10 hover:border-white/40 hover:-translate-y-0.5 transition-all duration-300">
+              <button className="shimmer-sweep px-8 py-3.5 bg-white/5 backdrop-blur-sm border border-white/20 text-white font-medium rounded-full hover:bg-white/10 hover:border-white/40 hover:-translate-y-0.5 transition-all duration-300">
                 See Impact In Motion
               </button>
             </motion.div>
