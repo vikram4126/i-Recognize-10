@@ -1,27 +1,56 @@
 {
+  "navbar": {
+    "logo": "/src/assets/kpmg-logo.svg",
+    "cta": "Nominations Open",
+    "menuLabel": "Menu",
+    "links": [
+      { "title": "Home", "href": "#home", "icon": "Home" },
+      { "title": "About", "href": "#inside", "icon": "Info" },
+      { "title": "Award Categories", "href": "#awards", "icon": "Award" },
+      { "title": "Core Team", "href": "#team", "icon": "Users" },
+      { "title": "Journey", "href": "#journey", "icon": "Map" },
+      { "title": "Jury & Support", "href": "#support", "icon": "Scale" },
+      { "title": "Archives", "href": "#previous", "icon": "Trophy" },
+      { "title": "Hall of Fame", "href": "#winners", "icon": "Medal" },
+      { "title": "Be Part of it", "href": "#bepart", "icon": "Award" }
+    ],
+    "footer": {
+      "tagline": "2026 i-Recognize",
+      "brand": "KPMG"
+    }
+  },
   "hero": {
     "badge": "A KPMG Initiative",
     "title": "i-Recognize",
     "subtitle": "Small moves. Powerful impact. Celebrating the agility and precision of global excellence across KPMG.",
     "ctaLabel": "Nominate Now",
     "timerLabel": "Event Starts In",
-    "targetDate": "April 23, 2026 00:00:00"
+    "targetDate": "April 23, 2026 00:00:00",
+    "units": {
+      "days": "DAYS",
+      "hrs": "HRS",
+      "min": "MIN",
+      "sec": "SEC"
+    }
   },
   "infoCards": [
     {
       "title": "About i-Recognize",
       "text": "Discover our vision for excellence and how we identify the spark in everyday collaboration.",
-      "cta": "Learn More"
+      "cta": "Learn More",
+      "href": "#inside"
     },
     {
       "title": "The Journey",
       "text": "From first nomination to the grand stage, follow the path of prestige and growth.",
-      "cta": "View Path"
+      "cta": "View Path",
+      "href": "#journey"
     },
     {
       "title": "Previous Editions",
       "text": "Relive the moments of brilliance that have defined our legacy over the years.",
-      "cta": "Explore"
+      "cta": "Explore",
+      "href": "#previous"
     }
   ],
   "sectionIntro": {
@@ -96,15 +125,18 @@
     ]
   },
   "team": {
+    "badge": "People Power",
+    "title": "Core Team Members",
+    "description": "The people driving the rhythm and momentum of i-Recognize",
     "members": [
-      { "name": "Aditya", "role": "Lead Architect", "img": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&q=80&w=150" },
-      { "name": "Priyanka", "role": "UX Director", "img": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&q=80&w=150" },
-      { "name": "Rajesh", "role": "Strategy Head", "img": "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&q=80&w=150" },
-      { "name": "Neha", "role": "Digital Lead", "img": "https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&q=80&w=150" },
-      { "name": "Siddharth", "role": "Creative Lead", "img": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=150" },
-      { "name": "Ananya", "role": "Ops Manager", "img": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=150" },
-      { "name": "Manish", "role": "Tech Lead", "img": "https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&q=80&w=150" },
-      { "name": "Ritu", "role": "Engagement Lead", "img": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&q=80&w=150" }
+      { "name": "Aditya", "role": "Lead Architect", "img": "/src/assets/images/team-aditya.jpg" },
+      { "name": "Priyanka", "role": "UX Director", "img": "/src/assets/images/team-priyanka.jpg" },
+      { "name": "Rajesh", "role": "Strategy Head", "img": "/src/assets/images/team-rajesh.jpg" },
+      { "name": "Neha", "role": "Digital Lead", "img": "/src/assets/images/team-neha.jpg" },
+      { "name": "Siddharth", "role": "Creative Lead", "img": "/src/assets/images/team-siddharth.jpg" },
+      { "name": "Ananya", "role": "Ops Manager", "img": "/src/assets/images/team-ananya.jpg" },
+      { "name": "Manish", "role": "Tech Lead", "img": "/src/assets/images/team-manish.jpg" },
+      { "name": "Ritu", "role": "Engagement Lead", "img": "/src/assets/images/team-ritu.jpg" }
     ]
   },
   "journey": {
@@ -120,47 +152,55 @@
       { "id": 7, "title": "Legacy", "day": "Annual Event", "desc": "Continuous archival of recognized stories in the platform's hall of fame." }
     ]
   },
-  "theme": {
-    "titlePrefix": "THE",
-    "titleMain": "HUMMINGBIRD",
-    "description": "The hummingbird represents focus and consistency - a reminder that impactful work is driven by precision and sustained effort. Small actions, repeated with intentional focus, create ripples of change. This spirit defines the core of i-Recognize 2026."
+  "themeSection": {
+    "badge": "The Theme 2026",
+    "title": "The Hummingbird: Resilience & Agility",
+    "paragraphs": [
+      "In 2026, we celebrate the spirit of the Hummingbird. Small in stature but immense in impact, it represents the agility, speed, and tireless energy that defines our collective journey.",
+      "Just as the hummingbird finds the sweetest nectar through determination, we seek out the best in our teams, acknowledging the small efforts that lead to grand achievements."
+    ],
+    "cta": "Learn More About Theme",
+    "img": "/src/assets/humming-bird.svg"
   },
   "support": {
+    "badge": "People Behind the Process",
+    "title": "Jury & SPOC Support",
     "juryTitle": "The Jury",
     "spocTitle": "SPOC Support",
     "juryMembers": [
-      { "name": "Amitabh", "role": "Partner", "img": "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&q=80&w=150" },
-      { "name": "Sonal", "role": "Director", "img": "https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&q=80&w=150" },
-      { "name": "Vikram", "role": "Senior Partner", "img": "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&q=80&w=150" },
-      { "name": "Pooja", "role": "Head of Ops", "img": "https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?auto=format&fit=crop&q=80&w=150" }
+      { "name": "Amitabh", "role": "Partner", "img": "/src/assets/images/jury-amitabh.jpg" },
+      { "name": "Sonal", "role": "Director", "img": "/src/assets/images/jury-sonal.jpg" },
+      { "name": "Vikram", "role": "Senior Partner", "img": "/src/assets/images/jury-vikram.jpg" },
+      { "name": "Pooja", "role": "Head of Ops", "img": "/src/assets/images/jury-pooja.jpg" }
     ],
     "spocMembers": [
-      { "name": "Rahul", "dpt": "Digital Unit", "img": "https://images.unsplash.com/photo-1599566150163-29194dcaad36?auto=format&fit=crop&q=80&w=150" },
-      { "name": "Deepa", "dpt": "Strategy Unit", "img": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&q=80&w=150" },
-      { "name": "Kunal", "dpt": "Delivery Unit", "img": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=150" },
-      { "name": "Mehak", "dpt": "Admin Unit", "img": "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&q=80&w=150" }
+      { "name": "Rahul", "dpt": "Digital Unit", "img": "/src/assets/images/spoc-rahul.jpg" },
+      { "name": "Deepa", "dpt": "Strategy Unit", "img": "/src/assets/images/spoc-deepa.jpg" },
+      { "name": "Kunal", "dpt": "Delivery Unit", "img": "/src/assets/images/spoc-kunal.jpg" },
+      { "name": "Mehak", "dpt": "Admin Unit", "img": "/src/assets/images/spoc-mehak.jpg" }
     ]
   },
   "archival": {
-    "title": "ARCHIVAL HIGHLIGHTS",
+    "badge": "Archival Highlights",
+    "title": "Previous Editions Highlights",
     "cta": "Explore Full Archives",
     "editions": [
       {
         "year": "2023",
         "title": "Aura Edition",
-        "img": "previous-2023.JPG",
+        "img": "/src/assets/images/previous-2023.JPG",
         "link": "https://edition.kpmg.com/2023"
       },
       {
         "year": "2024",
         "title": "Velocity Edition",
-        "img": "previous-2024.JPG",
+        "img": "/src/assets/images/previous-2024.JPG",
         "link": "https://edition.kpmg.com/2024"
       },
       {
         "year": "2025",
         "title": "Pulse Edition",
-        "img": "previous-2025.JPG",
+        "img": "/src/assets/images/previous-2025.JPG",
         "link": "https://edition.kpmg.com/2025"
       }
     ]
@@ -171,27 +211,38 @@
     "years": ["2025", "2024", "2023"],
     "byYear": {
       "2025": [
-        { "name": "Alpha Digital Squad", "team": "Digital Services", "award": "Digital Velocity Winner 2025", "img": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=600&h=750" },
-        { "name": "Creative Flow Collective", "team": "Design Studio", "award": "Design Brilliance Winner 2025", "img": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&q=80&w=600&h=750" },
-        { "name": "Project Keystone", "team": "Delivery Excellence", "award": "Result Momentum Winner 2025", "img": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&q=80&w=600&h=750" },
-        { "name": "The Visionaries", "team": "Strategy & Growth", "award": "Story Clarity Winner 2025", "img": "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&q=80&w=600&h=750" },
-        { "name": "Spark Labs", "team": "Innovation Hub", "award": "Creative Spark Winner 2025", "img": "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&q=80&w=600&h=750" },
-        { "name": "Storytellers Unit", "team": "Content & Communication", "award": "Content Impact Winner 2025", "img": "https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&q=80&w=600&h=750" },
-        { "name": "Fluid UX Team", "team": "Experience Design", "award": "Motion Flow Winner 2025", "img": "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&q=80&w=600&h=750" },
-        { "name": "Synergy Core", "team": "Cross-Functional Ops", "award": "Collective Choice Winner 2025", "img": "https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?auto=format&fit=crop&q=80&w=600&h=750" }
+        { "name": "Alpha Digital Squad", "team": "Digital Services", "award": "Digital Velocity Winner 2025", "img": "/src/assets/images/winner-2025-1.jpg" },
+        { "name": "Creative Flow Collective", "team": "Design Studio", "award": "Design Brilliance Winner 2025", "img": "/src/assets/images/winner-2025-2.jpg" },
+        { "name": "Project Keystone", "team": "Delivery Excellence", "award": "Result Momentum Winner 2025", "img": "/src/assets/images/winner-2025-3.jpg" },
+        { "name": "The Visionaries", "team": "Strategy & Growth", "award": "Story Clarity Winner 2025", "img": "/src/assets/images/winner-2025-4.jpg" },
+        { "name": "Spark Labs", "team": "Innovation Hub", "award": "Creative Spark Winner 2025", "img": "/src/assets/images/winner-2025-5.jpg" },
+        { "name": "Storytellers Unit", "team": "Content & Communication", "award": "Content Impact Winner 2025", "img": "/src/assets/images/winner-2025-6.jpg" },
+        { "name": "Fluid UX Team", "team": "Experience Design", "award": "Motion Flow Winner 2025", "img": "/src/assets/images/winner-2025-7.jpg" },
+        { "name": "Synergy Core", "team": "Cross-Functional Ops", "award": "Collective Choice Winner 2025", "img": "/src/assets/images/winner-2025-8.jpg" }
       ],
       "2024": [
-        { "name": "Alpha Digital Squad", "team": "Digital Services", "award": "Digital Velocity Winner 2024", "img": "https://images.unsplash.com/photo-1599566150163-29194dcaad36?auto=format&fit=crop&q=80&w=600&h=750" },
-        { "name": "Creative Flow Collective", "team": "Design Studio", "award": "Design Brilliance Winner 2024", "img": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=600&h=750" },
-        { "name": "Project Keystone", "team": "Delivery Excellence", "award": "Result Momentum Winner 2024", "img": "https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&q=80&w=600&h=750" },
-        { "name": "The Visionaries", "team": "Strategy & Growth", "award": "Story Clarity Winner 2024", "img": "https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&q=80&w=600&h=750" }
+        { "name": "Alpha Digital Squad", "team": "Digital Services", "award": "Digital Velocity Winner 2024", "img": "/src/assets/images/winner-2024-1.jpg" },
+        { "name": "Creative Flow Collective", "team": "Design Studio", "award": "Design Brilliance Winner 2024", "img": "/src/assets/images/winner-2024-2.jpg" },
+        { "name": "Project Keystone", "team": "Delivery Excellence", "award": "Result Momentum Winner 2024", "img": "/src/assets/images/winner-2024-3.jpg" },
+        { "name": "The Visionaries", "team": "Strategy & Growth", "award": "Story Clarity Winner 2024", "img": "/src/assets/images/winner-2024-4.jpg" }
       ],
       "2023": [
-        { "name": "Catalyst Team", "team": "Advisory", "award": "Creative Spark Winner 2023", "img": "https://images.unsplash.com/photo-1537368910025-700350fe46c7?auto=format&fit=crop&q=80&w=600&h=750" },
-        { "name": "Momentum Group", "team": "Audit & Assurance", "award": "Result Momentum Winner 2023", "img": "https://images.unsplash.com/photo-1614644147798-f8c0fc9da7f6?auto=format&fit=crop&q=80&w=600&h=750" },
-        { "name": "ClearVoice Ops", "team": "Tax & Legal", "award": "Story Clarity Winner 2023", "img": "https://images.unsplash.com/photo-1573497491765-dccce02b29df?auto=format&fit=crop&q=80&w=600&h=750" },
-        { "name": "Pulse Digital", "team": "Technology Unit", "award": "Digital Velocity Winner 2023", "img": "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&q=80&w=600&h=750" }
+        { "name": "Catalyst Team", "team": "Advisory", "award": "Creative Spark Winner 2023", "img": "/src/assets/images/winner-2023-1.jpg" },
+        { "name": "Momentum Group", "team": "Audit & Assurance", "award": "Result Momentum Winner 2023", "img": "/src/assets/images/winner-2023-2.jpg" },
+        { "name": "ClearVoice Ops", "team": "Tax & Legal", "award": "Story Clarity Winner 2023", "img": "/src/assets/images/winner-2023-3.jpg" },
+        { "name": "Pulse Digital", "team": "Technology Unit", "award": "Digital Velocity Winner 2023", "img": "/src/assets/images/winner-2023-4.jpg" }
       ]
     }
+  },
+  "bePart": {
+     "badge": "Join the Movement",
+     "title": "Be Part of the Platform",
+     "contentTop": "Whether you're learning, solving, creating, or improving — i-Recognize is your platform to be seen and heard.",
+     "spocLinkText": "Team SPOC",
+     "contentBottom": "Connect with your and take part in a shared journey of showcasing, learning, and recognition.",
+     "bg": "/src/assets/images/bg-3-only.jpg"
+  },
+  "footer": {
+    "copyright": "2026 i-Recognize. KPMG is a trademark."
   }
 }

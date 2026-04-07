@@ -1,7 +1,6 @@
 import React from 'react'
 import { motion } from 'framer-motion'
 import siteData from '../data/site-content.json'
-import hummingBird from '../assets/humming-bird.svg'
 
 const ThemeSection = () => {
   const { themeSection } = siteData
@@ -25,8 +24,8 @@ const ThemeSection = () => {
               <div className="absolute inset-2 border border-[#1E49E2]/10 rounded-full animate-reverse-slow" />
               
               <img 
-                src={hummingBird} 
-                alt="Theme: The Hummingbird" 
+                src={themeSection.img} 
+                alt={themeSection.title} 
                 className="w-4/5 h-4/5 object-contain relative z-10 drop-shadow-2xl brightness-100"
               />
             </div>
@@ -42,7 +41,7 @@ const ThemeSection = () => {
               viewport={{ once: true }}
               className="text-[11px] font-black uppercase tracking-[0.3em] mb-4 text-[#1E49E2]"
             >
-              The Theme 2026
+              {themeSection.badge}
             </motion.p>
             <motion.h2
               initial={{ opacity: 0, y: 20 }}
@@ -50,7 +49,7 @@ const ThemeSection = () => {
               viewport={{ once: true }}
               className="text-4xl md:text-5xl font-black text-[#0C233C] mb-8 tracking-tighter leading-tight"
             >
-              The Hummingbird: Resilience & Agility
+              {themeSection.title}
             </motion.h2>
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -59,18 +58,15 @@ const ThemeSection = () => {
               transition={{ delay: 0.1 }}
               className="space-y-6 text-[#0C233C]/70 font-medium leading-relaxed mb-10"
             >
-              <p>
-                In 2026, we celebrate the spirit of the Hummingbird. Small in stature but immense in impact, it represents the agility, speed, and tireless energy that defines our collective journey.
-              </p>
-              <p>
-                Just as the hummingbird finds the sweetest nectar through determination, we seek out the best in our teams, acknowledging the small efforts that lead to grand achievements.
-              </p>
+              {themeSection.paragraphs.map((p, idx) => (
+                <p key={idx}>{p}</p>
+              ))}
             </motion.div>
             
             <button
               className="px-8 py-4 bg-[#0C233C] text-white rounded-full font-black text-[11px] uppercase tracking-widest shadow-xl hover:bg-[#1E49E2] transition-all hover:-translate-y-1 active:scale-95"
             >
-              Learn More About Theme
+              {themeSection.cta}
             </button>
           </div>
 

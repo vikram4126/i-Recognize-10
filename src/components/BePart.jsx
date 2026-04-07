@@ -31,7 +31,6 @@ const BePart = () => {
           >
             Be Part of the Platform
           </motion.h2>
-          <div className="w-12 h-1 bg-[#ACEAFF]/20 rounded-full" />
         </div>
 
         {/* Description */}

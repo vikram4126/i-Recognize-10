@@ -39,7 +39,6 @@ const PreviousEditions = () => {
           >
             {archival.title}
           </motion.h2>
-          <div className="w-12 h-1 bg-[#1E49E2]/20 rounded-full" />
         </div>
 
         {/* Year Items */}
