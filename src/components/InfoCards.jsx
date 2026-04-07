@@ -7,7 +7,7 @@ const InfoCards = () => {
   const { infoCards } = siteData
 
   return (
-    <div className="relative z-10 w-full mt-12 overflow-visible">
+    <div className="relative z-10 w-full overflow-visible">
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-stretch">
         {infoCards.map((card, idx) => (
           <motion.div 

@@ -70,7 +70,7 @@ const Hero = () => {
     <section 
       id="home" 
       ref={bannerRef}
-      className="relative min-h-screen bg-[#00338D] text-white overflow-hidden flex flex-col pb-0"
+      className="relative w-full min-h-[100vh] lg:h-[100vh] lg:min-h-[850px] bg-[#00338D] text-white overflow-hidden flex flex-col"
     >
         <div className="absolute inset-0 z-0 overflow-hidden">
           <video 
@@ -87,9 +87,9 @@ const Hero = () => {
           <div className="absolute inset-0 bg-[#00338D]/30" /> 
         </div>
 
-        {/* Hero Content — Visually centered, tight flow into cards */}
-        <div className="relative z-10 pt-[28vh] flex flex-col items-center justify-center">
-          <div className="flex flex-col items-center text-center gap-8">
+        {/* Hero Content — Centered with bottom padding for absolute cards */}
+        <div className="relative z-10 flex-1 flex flex-col items-center justify-center pt-32 pb-8 lg:pt-0 lg:pb-[250px] px-6">
+          <div className="flex flex-col items-center text-center gap-8 max-w-5xl mx-auto">
             
             {/* Title */}
             <motion.h1
@@ -142,11 +142,11 @@ const Hero = () => {
           </div>
         </div>
 
-        <div 
-          ref={cardsRef}
-          className="container max-w-7xl mx-auto px-6 relative z-10 mt-[60px] pb-0"
-        >
-          <InfoCards />
+        {/* Cards Wrapper - Fixed to bottom on large screens */}
+        <div className="relative lg:absolute lg:bottom-0 lg:left-0 lg:right-0 z-20 w-full max-w-7xl mx-auto px-6 pt-12 lg:pt-0 pb-12 lg:pb-0">
+          <div ref={cardsRef} className="w-full">
+            <InfoCards />
+          </div>
         </div>
     </section>
   )
