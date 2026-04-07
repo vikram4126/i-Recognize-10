@@ -88,7 +88,7 @@ const Hero = () => {
         </div>
 
         {/* Hero Content */}
-        <div className="relative z-10 flex-1 flex flex-col items-center justify-center pt-32 pb-32 lg:pt-16 lg:pb-[260px] px-6">
+        <div className="relative z-10 flex-1 flex flex-col items-center justify-center pt-40 pb-32 lg:pt-32 lg:pb-[260px] px-6">
           <div className="flex flex-col items-center text-center gap-6 lg:gap-8 max-w-5xl mx-auto w-full">
             
             {/* Title & Tagline Group */}
