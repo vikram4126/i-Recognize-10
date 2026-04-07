@@ -3,7 +3,7 @@
     "badge": "A KPMG Initiative",
     "title": "i-Recognize",
     "subtitle": "Small moves. Powerful impact. Celebrating the agility and precision of global excellence across KPMG.",
-    "ctaLabel": "Reserve Your Seat",
+    "ctaLabel": "Nominate Now",
     "timerLabel": "Event Starts In",
     "targetDate": "April 23, 2026 00:00:00"
   },
@@ -95,17 +95,29 @@
       }
     ]
   },
+  "team": {
+    "members": [
+      { "name": "Aditya", "role": "Lead Architect", "img": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&q=80&w=150" },
+      { "name": "Priyanka", "role": "UX Director", "img": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&q=80&w=150" },
+      { "name": "Rajesh", "role": "Strategy Head", "img": "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&q=80&w=150" },
+      { "name": "Neha", "role": "Digital Lead", "img": "https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&q=80&w=150" },
+      { "name": "Siddharth", "role": "Creative Lead", "img": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=150" },
+      { "name": "Ananya", "role": "Ops Manager", "img": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=150" },
+      { "name": "Manish", "role": "Tech Lead", "img": "https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&q=80&w=150" },
+      { "name": "Ritu", "role": "Engagement Lead", "img": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&q=80&w=150" }
+    ]
+  },
   "journey": {
     "badge": "THE PROCESS",
     "title": "Roadmap to Recognition",
     "steps": [
-      { "title": "Spotting Impact", "content": "Identifying teams and projects that have made a significant difference within the organization." },
-      { "title": "Self Nomination", "content": "Teams submit their work through a structured process, highlighting key achievements and outcomes." },
-      { "title": "Initial Review", "content": "A preliminary review by the core committee to ensure alignment with defined categories." },
-      { "title": "Shortlisting", "content": "Jury members review the nominations to shortlist the most impactful work across categories." },
-      { "title": "Live Showcase", "content": "Shortlisted teams present their work to the organization, sharing learnings and approaches." },
-      { "title": "Final Evaluation", "content": "Jury members convene to decide on the final winners based on predefined evaluation criteria." },
-      { "title": "Recognition Ceremony", "content": "The journey culminates in a celebration where impactful work is recognized and rewarded." }
+      { "id": 1, "title": "Nomination", "day": "April 10rd", "desc": "Official start for submitting entries through the platform portal." },
+      { "id": 2, "title": "Review", "day": "April 15th", "desc": "Initial screening by the core committee for adherence to category criteria." },
+      { "id": 3, "title": "Shortlist", "day": "April 18th", "desc": "Identification of the top 3 contenders in each award category." },
+      { "id": 4, "title": "Showcase", "day": "April 20th", "desc": "Platform opens for the wider teams to view and learn from the shortlisted work." },
+      { "id": 5, "title": "Final Jury", "day": "April 22nd", "desc": "Exclusive presentation to the global jury for final winner selection." },
+      { "id": 6, "title": "Gala Night", "day": "April 23rd", "desc": "Grand celebration and live announcement of the i-Recognize 2026 winners." },
+      { "id": 7, "title": "Legacy", "day": "Annual Event", "desc": "Continuous archival of recognized stories in the platform's hall of fame." }
     ]
   },
   "theme": {

@@ -22,12 +22,12 @@ const ThemeSection = () => {
             <div className="aspect-square relative flex items-center justify-center">
               {/* Decorative rings */}
               <div className="absolute inset-0 border border-[#0C233C]/5 rounded-full animate-spin-slow" />
-              <div className="absolute inset-4 border border-[#1E49E2]/10 rounded-full animate-reverse-slow" />
+              <div className="absolute inset-2 border border-[#1E49E2]/10 rounded-full animate-reverse-slow" />
               
               <img 
                 src={hummingBird} 
                 alt="Theme: The Hummingbird" 
-                className="w-4/5 h-4/5 object-contain relative z-10 drop-shadow-2xl"
+                className="w-4/5 h-4/5 object-contain relative z-10 drop-shadow-2xl brightness-100"
               />
             </div>
             {/* Soft glow */}
@@ -67,13 +67,11 @@ const ThemeSection = () => {
               </p>
             </motion.div>
             
-            <motion.button
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              className="px-8 py-4 bg-[#00338D] text-white rounded-full font-black text-[11px] uppercase tracking-widest shadow-xl hover:bg-[#1E49E2] transition-colors"
+            <button
+              className="px-8 py-4 bg-[#0C233C] text-white rounded-full font-black text-[11px] uppercase tracking-widest shadow-xl hover:bg-[#1E49E2] transition-all hover:-translate-y-1 active:scale-95"
             >
               Learn More About Theme
-            </motion.button>
+            </button>
           </div>
 
         </div>

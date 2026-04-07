@@ -3,23 +3,22 @@ import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import Navbar from './components/Navbar'
 import Hero from './components/Hero'
-import InfoCards from './components/InfoCards'
 import SectionIntro from './components/SectionIntro'
+
 import Awards from './components/Awards'
-import Timeline from './components/Timeline'
 import Team from './components/Team'
+import Timeline from './components/Timeline'
 import JurySupport from './components/JurySupport'
 import PreviousEditions from './components/PreviousEditions'
 import Winners from './components/Winners'
 import BePart from './components/BePart'
-import ThemeSection from './components/ThemeSection'
 import Footer from './components/Footer'
 
 gsap.registerPlugin(ScrollTrigger)
 
 function App() {
   useEffect(() => {
-    // Global reveal animation
+    // Global reveal animation for sections
     const reveals = document.querySelectorAll('.gsap-reveal')
     reveals.forEach((el) => {
       gsap.to(el, {
@@ -37,12 +36,12 @@ function App() {
   }, [])
 
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen bg-white">
       <Navbar />
       <main>
         <Hero />
         <SectionIntro />
-        <ThemeSection />
+
         <Awards />
         <Team />
         <Timeline />

@@ -21,7 +21,7 @@ const Navbar = () => {
   const navLinks = [
     { title: 'Home', href: '#home', icon: Home },
     { title: 'About', href: '#inside', icon: Info },
-    { title: 'Theme', href: '#theme', icon: Zap },
+
     { title: 'Award Categories', href: '#awards', icon: Award },
     { title: 'Core Team', href: '#team', icon: Users },
     { title: 'Journey', href: '#journey', icon: Map },
@@ -37,7 +37,7 @@ const Navbar = () => {
     <>
       <nav
         id="home"
-        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${scrolled ? 'py-4 bg-[#0C233C]/90 backdrop-blur-xl border-b border-white/10 shadow-2xl' : 'py-6 bg-transparent'
+        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${scrolled ? 'py-4 bg-[#00338D]/95 backdrop-blur-xl border-b border-white/10 shadow-2xl' : 'py-6 bg-transparent'
           }`}
       >
         <div className="container max-w-7xl mx-auto px-6 flex justify-between items-center">
@@ -45,20 +45,19 @@ const Navbar = () => {
           <motion.div
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
-            className="flex items-center gap-3 group cursor-pointer"
+            className="flex items-center gap-6 group cursor-pointer"
             onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
           >
-            <div className="relative flex items-center">
-              <img src={logo} alt="KPMG" className="h-8 w-auto relative z-10 invert brightness-100" />
+            <div className="relative flex items-center gap-5">
+              <img src={logo} alt="KPMG" className="h-8 w-auto relative z-10" />
               <div className="absolute inset-0 bg-[#ACEAFF]/20 blur-md rounded-full scale-0 group-hover:scale-150 transition-transform duration-500" />
             </div>
-            <span className="text-xl font-black tracking-tight text-white group-hover:text-[#1E49E2] transition-colors">i-Recognize</span>
           </motion.div>
 
-
+          {/* Action Buttons & Burger */}
           <div className="flex items-center gap-4">
-            <button className="hidden xl:block px-8 py-3 bg-white/5 backdrop-blur-md border border-[#ACEAFF]/30 hover:border-[#1E49E2] text-white rounded-full text-[10px] font-black uppercase tracking-[0.2em] transition-all hover:shadow-[0_0_20px_rgba(172,234,255,0.3)] active:scale-95 whitespace-nowrap">
-              Registration Open
+            <button className="hidden xl:block px-8 py-3 bg-white/5 backdrop-blur-md border border-[#ACEAFF]/30 hover:border-[#ACEAFF] text-white rounded-full text-[10px] font-black uppercase tracking-[0.2em] transition-all hover:shadow-[0_0_20px_rgba(172,234,255,0.3)] active:scale-95 whitespace-nowrap">
+              Nominations Open
             </button>
             <button
               onClick={toggleMenu}
@@ -108,8 +107,8 @@ const Navbar = () => {
                     onClick={toggleMenu}
                     initial={{ opacity: 0, x: 20 }}
                     animate={{ opacity: 1, x: 0 }}
-                    transition={{ delay: idx * 0.05 }}
-                    className="flex items-center gap-6 py-2 group transition-all"
+                    transition={{ delay: idx * 0.03 }}
+                    className="flex items-center gap-6 py-2.5 group transition-all"
                   >
                     <motion.div
                       whileHover={{ scale: 1.1 }}
@@ -117,7 +116,7 @@ const Navbar = () => {
                     >
                       <link.icon size={20} strokeWidth={2.5} />
                     </motion.div>
-                    <span className="text-lg font-bold text-white/60 group-hover:text-[#ACEAFF] transition-colors tracking-tight">
+                    <span className="text-lg font-bold text-white/60 group-hover:text-white transition-colors tracking-tight">
                       {link.title}
                     </span>
                   </motion.a>
@@ -125,13 +124,13 @@ const Navbar = () => {
               </div>
 
               <div className="mt-8 pt-8 border-t border-white/10 shrink-0">
-                <button className="w-full py-5 bg-white/5 backdrop-blur-md border border-[#ACEAFF]/30 hover:border-[#ACEAFF] text-white rounded-2xl font-black uppercase tracking-[0.3em] transition-all hover:shadow-[0_0_30px_rgba(172,234,255,0.4)] active:scale-95 text-[10px]">
-                  Registration Open
+                <button className="w-full py-5 bg-white/5 backdrop-blur-md border border-[#ACEAFF]/30 hover:border-[#1E49E2] text-white rounded-2xl font-black uppercase tracking-[0.3em] transition-all hover:shadow-[0_0_30px_rgba(172,234,255,0.4)] active:scale-95 text-[11px]">
+                  Nominations Open
                 </button>
                 <div className="flex items-center justify-center gap-6 mt-8 opacity-40">
-                  <span className="text-[10px] font-bold uppercase tracking-widest">2026 i-Recognize</span>
+                  <span className="text-[10px] font-bold uppercase tracking-widest text-[#ACEAFF]">2026 i-Recognize</span>
                   <div className="w-1.5 h-1.5 bg-white rounded-full" />
-                  <span className="text-[10px] font-bold uppercase tracking-widest">KPMG</span>
+                  <span className="text-[10px] font-bold uppercase tracking-widest text-white">KPMG</span>
                 </div>
               </div>
             </motion.div>

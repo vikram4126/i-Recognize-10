@@ -1,93 +1,91 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import siteData from '../data/site-content.json'
 
-const Timeline = () => {
-  const [activeStep, setActiveStep] = useState(null)
-  const { journey } = siteData
+const Step = ({ step, idx }) => {
+  const [isHovered, setIsHovered] = React.useState(false)
 
   return (
-    <section id="journey" className="relative py-32 bg-[#F5F7FA] overflow-hidden">
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_60%_40%_at_50%_50%,var(--primary-accent),transparent)] opacity-4 pointer-events-none" />
+    <motion.div
+      initial={{ opacity: 0, scale: 0.9 }}
+      whileInView={{ opacity: 1, scale: 1 }}
+      viewport={{ once: true }}
+      transition={{ delay: idx * 0.1 }}
+      className="group relative flex flex-col items-center flex-1 min-w-[200px]"
+      onMouseEnter={() => setIsHovered(true)}
+      onMouseLeave={() => setIsHovered(false)}
+    >
+      {/* Tooltip Popup */}
+      <AnimatePresence>
+        {isHovered && (
+          <motion.div
+            initial={{ opacity: 0, y: 10, scale: 0.95 }}
+            animate={{ opacity: 1, y: 0, scale: 1 }}
+            exit={{ opacity: 0, y: 5, scale: 0.95 }}
+            className="absolute -top-16 left-1/2 -translate-x-1/2 z-30 w-48 p-3 bg-[#0C233C] text-white rounded-2xl shadow-2xl text-center pointer-events-none border border-white/10"
+          >
+            <p className="text-[10px] font-medium leading-tight opacity-90">{step.desc}</p>
+            <div className="absolute top-full left-1/2 -translate-x-1/2 w-0 h-0 border-l-[6px] border-l-transparent border-r-[6px] border-r-transparent border-t-[6px] border-t-[#0C233C]" />
+          </motion.div>
+        )}
+      </AnimatePresence>
 
-      <div className="max-w-7xl mx-auto px-6 relative z-10">
-        {/* Section Header */}
-        <div className="text-center mb-20">
+      {/* Connector Bar (only for middle items) */}
+      {idx < 6 && (
+        <div className="hidden lg:block absolute top-[28px] left-[60%] w-full h-[2px] bg-[#0C233C]/5 group-hover:bg-[#1E49E2]/20 transition-colors z-0" />
+      )}
+
+      {/* Step Number Circle */}
+      <div className="w-14 h-14 rounded-full bg-white border-2 border-[#0C233C]/10 flex flex-col items-center justify-center text-[#0C233C] mb-8 group-hover:bg-[#1E49E2] group-hover:border-[#1E49E2] group-hover:text-white transition-all shadow-sm z-10 cursor-pointer">
+        <span className="text-[10px] font-black uppercase leading-none mb-0.5">0{step.id}</span>
+        <div className="w-4 h-[1.5px] bg-[#0C233C]/20 group-hover:bg-white/40" />
+      </div>
+
+      {/* Info */}
+      <div className="text-center px-4">
+        <h3 className="text-sm font-black text-[#0C233C] mb-2 tracking-tight uppercase leading-none">{step.title}</h3>
+        <p className="text-[10px] font-bold text-[#1E49E2] uppercase tracking-[0.2em]">{step.day}</p>
+      </div>
+    </motion.div>
+  )
+}
+
+const Timeline = () => {
+  const { journey } = siteData
+  const timeline = journey.steps
+
+  return (
+    <section id="journey" className="relative py-20 bg-[#F5F7FA] overflow-hidden">
+      <div className="container max-w-7xl mx-auto px-6 relative z-10 text-center">
+        
+        {/* Standard Header Stack */}
+        <div className="flex flex-col items-center text-center mb-16">
           <motion.p
-            initial={{ opacity: 0, y: 8 }}
+            initial={{ opacity: 0, y: 10 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             className="text-[11px] font-black uppercase tracking-[0.3em] mb-4 text-[#1E49E2]"
           >
-            {journey.badge}
+            {journey.badge || "THE PROCESS"}
           </motion.p>
           <motion.h2
-            initial={{ opacity: 0, y: 16 }}
+            initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ delay: 0.05, duration: 0.55 }}
-            className="gsap-reveal text-4xl md:text-5xl font-black tracking-tighter text-[#0C233C]"
+            className="text-4xl md:text-5xl font-black text-[#0C233C] tracking-tighter mb-6"
           >
             {journey.title}
           </motion.h2>
+          <div className="w-12 h-1 bg-[#1E49E2]/20 rounded-full" />
         </div>
 
-        {/* Roadmap */}
-        <div className="relative pt-16">
-          {/* Connecting line */}
-          <div className="absolute top-[104px] left-[calc(100%/14)] right-[calc(100%/14)] h-[1px] bg-[#0C233C]/10 hidden lg:block" />
-
-          <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-7 gap-y-16 lg:gap-0 relative z-10">
-            {journey.steps.map((step, idx) => (
-              <div
-                key={idx}
-                className="flex flex-col items-center group relative px-2"
-                onMouseEnter={() => setActiveStep(idx)}
-                onMouseLeave={() => setActiveStep(null)}
-                onTouchStart={() => setActiveStep(idx)}
-              >
-                {/* Step circle */}
-                <div className={`relative w-20 h-20 rounded-full flex items-center justify-center transition-all duration-300 cursor-pointer z-20
-                  ${activeStep === idx
-                    ? 'bg-[#1E49E2] text-white scale-110 shadow-lg shadow-[#1E49E2]/25'
-                    : 'bg-white text-[#0C233C] shadow-sm border border-[#0C233C]/10 hover:border-[#1E49E2]/20'
-                  }`}
-                >
-                  <span className="text-xl font-black tracking-tighter">0{idx + 1}</span>
-                </div>
-
-                {/* Label */}
-                <div className="mt-8 text-center px-2">
-                  <h4 className={`text-[13px] font-black uppercase tracking-tight leading-tight transition-colors duration-300 ${activeStep === idx ? 'text-[#1E49E2]' : 'text-[#0C233C]/65'}`}>
-                    {step.title}
-                  </h4>
-                </div>
-
-                {/* Tooltip */}
-                <AnimatePresence>
-                  {activeStep === idx && (
-                    <motion.div
-                      initial={{ opacity: 0, y: 8, scale: 0.95 }}
-                      animate={{ opacity: 1, y: 0, scale: 1 }}
-                      exit={{ opacity: 0, y: 4, scale: 0.95 }}
-                      transition={{ duration: 0.3, ease: [0.34, 1.56, 0.64, 1] }}
-                      className="absolute bottom-full mb-8 w-56 p-4 bg-white border border-[#0C233C]/10 rounded-2xl shadow-xl z-50 pointer-events-none"
-                    >
-                      <h5 className="text-[#0C233C] font-black text-[10px] uppercase tracking-wider mb-1.5">
-                        Step 0{idx + 1}
-                      </h5>
-                      <p className="text-[#0C233C]/55 text-[12px] font-medium leading-snug">
-                        {step.content}
-                      </p>
-                      {/* Arrow */}
-                      <div className="absolute -bottom-[6px] left-1/2 -translate-x-1/2 w-3 h-3 bg-white border-r border-b border-[#0C233C]/10 rotate-45" />
-                    </motion.div>
-                  )}
-                </AnimatePresence>
-              </div>
-            ))}
-          </div>
+        {/* Steps Flex Container */}
+        <div className="flex flex-wrap lg:flex-nowrap items-start gap-y-16 justify-center max-w-6xl mx-auto">
+          {timeline.map((step, idx) => (
+            <Step key={step.id} step={step} idx={idx} />
+          ))}
         </div>
+
       </div>
     </section>
   )
