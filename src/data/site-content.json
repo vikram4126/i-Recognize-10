@@ -1,27 +1,55 @@
 {
+  "globals": {
+    "logoUrl": "/assets/kpmg-logo.svg",
+    "navLinks": [
+      { "title": "Home", "href": "#home", "icon": "Home" },
+      { "title": "About", "href": "#inside", "icon": "Info" },
+      { "title": "Award Categories", "href": "#awards", "icon": "Award" },
+      { "title": "Core Team", "href": "#team", "icon": "Users" },
+      { "title": "Journey", "href": "#journey", "icon": "Map" },
+      { "title": "Jury & Support", "href": "#support", "icon": "Scale" },
+      { "title": "Archives", "href": "#previous", "icon": "Trophy" },
+      { "title": "Hall of Fame", "href": "#winners", "icon": "Medal" },
+      { "title": "Be Part of it", "href": "#bepart", "icon": "ExternalLink" }
+    ],
+    "nominationCta": "Nominations Open",
+    "menuTitle": "Menu",
+    "footerBrand": "2026 i-Recognize",
+    "footerCorp": "KPMG"
+  },
   "hero": {
     "badge": "A KPMG Initiative",
-    "title": "i-Recognize",
+    "title": "I-Recognize",
     "subtitle": "Small moves. Powerful impact. Celebrating the agility and precision of global excellence across KPMG.",
     "ctaLabel": "Nominate Now",
     "timerLabel": "Event Starts In",
-    "targetDate": "April 23, 2026 00:00:00"
+    "targetDate": "April 23, 2026 00:00:00",
+    "videoUrl": "/assets/background-theme-video.mp4",
+    "timerUnits": {
+      "days": "DAYS",
+      "hours": "HRS",
+      "minutes": "MIN",
+      "seconds": "SEC"
+    }
   },
   "infoCards": [
     {
       "title": "About i-Recognize",
       "text": "Discover our vision for excellence and how we identify the spark in everyday collaboration.",
-      "cta": "Learn More"
+      "cta": "Learn More",
+      "href": "#inside"
     },
     {
       "title": "The Journey",
       "text": "From first nomination to the grand stage, follow the path of prestige and growth.",
-      "cta": "View Path"
+      "cta": "View Path",
+      "href": "#journey"
     },
     {
       "title": "Previous Editions",
       "text": "Relive the moments of brilliance that have defined our legacy over the years.",
-      "cta": "Explore"
+      "cta": "Explore",
+      "href": "#previous"
     }
   ],
   "sectionIntro": {
@@ -34,7 +62,8 @@
     ]
   },
   "awards": {
-    "title": "Award Categories",
+    "badge": "Award Categories",
+    "title": "8 Pillars of Excellence",
     "subtitle": "Celebrating excellence across 8 core categories that define the spirit of innovation and collective impact at i-Recognize.",
     "categories": [
       {
@@ -96,6 +125,9 @@
     ]
   },
   "team": {
+    "badge": "People Power",
+    "title": "Core Team Members",
+    "description": "The people driving the rhythm and momentum of i-Recognize",
     "members": [
       { "name": "Aditya", "role": "Lead Architect", "img": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&q=80&w=150" },
       { "name": "Priyanka", "role": "UX Director", "img": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&q=80&w=150" },
@@ -121,11 +153,17 @@
     ]
   },
   "theme": {
+    "badge": "THE THEME 2026",
+    "title": "The Hummingbird: Resilience & Agility",
     "titlePrefix": "THE",
     "titleMain": "HUMMINGBIRD",
-    "description": "The hummingbird represents focus and consistency - a reminder that impactful work is driven by precision and sustained effort. Small actions, repeated with intentional focus, create ripples of change. This spirit defines the core of i-Recognize 2026."
+    "description": "The hummingbird represents focus and consistency - a reminder that impactful work is driven by precision and sustained effort. Small actions, repeated with intentional focus, create ripples of change. This spirit defines the core of i-Recognize 2026.",
+    "hummingBirdUrl": "/assets/humming-bird.svg",
+    "cta": "Learn More About Theme"
   },
   "support": {
+    "badge": "People Behind the Process",
+    "title": "Jury & SPOC Support",
     "juryTitle": "The Jury",
     "spocTitle": "SPOC Support",
     "juryMembers": [
@@ -142,25 +180,26 @@
     ]
   },
   "archival": {
+    "badge": "Archival Highlights",
     "title": "ARCHIVAL HIGHLIGHTS",
     "cta": "Explore Full Archives",
     "editions": [
       {
         "year": "2023",
         "title": "Aura Edition",
-        "img": "previous-2023.JPG",
+        "img": "/assets/previous-2023.JPG",
         "link": "https://edition.kpmg.com/2023"
       },
       {
         "year": "2024",
         "title": "Velocity Edition",
-        "img": "previous-2024.JPG",
+        "img": "/assets/previous-2024.JPG",
         "link": "https://edition.kpmg.com/2024"
       },
       {
         "year": "2025",
         "title": "Pulse Edition",
-        "img": "previous-2025.JPG",
+        "img": "/assets/previous-2025.JPG",
         "link": "https://edition.kpmg.com/2025"
       }
     ]
@@ -193,5 +232,12 @@
         { "name": "Pulse Digital", "team": "Technology Unit", "award": "Digital Velocity Winner 2023", "img": "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&q=80&w=600&h=750" }
       ]
     }
+  },
+  "bepart": {
+    "badge": "Join the Movement",
+    "title": "Be Part of the Platform",
+    "description": "Ready to showcase your team's excellence? Join the path of recognition and celebrate the precision and agility of your group.",
+    "cta": "Submit Your Nomination",
+    "bgImage": "/assets/bg-3-only.jpg"
   }
 }

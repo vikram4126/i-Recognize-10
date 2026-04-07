@@ -1,12 +1,24 @@
 import React, { useState, useEffect } from 'react'
 import {
-  Menu, X, Home, Info, Zap, Map, Trophy, Users,
-  Scale, Medal, Award
+  Menu, X, Home, Info, Award, Users, Map, Scale, Trophy, Medal, ExternalLink
 } from 'lucide-react'
 import { motion, AnimatePresence } from 'framer-motion'
-import logo from '../assets/kpmg-logo.svg'
+import siteData from '../data/site-content.json'
+
+const ICON_MAP = {
+  Home,
+  Info,
+  Award,
+  Users,
+  Map,
+  Scale,
+  Trophy,
+  Medal,
+  ExternalLink
+}
 
 const Navbar = () => {
+  const { globals } = siteData
   const [isOpen, setIsOpen] = useState(false)
   const [scrolled, setScrolled] = useState(false)
 
@@ -17,19 +29,6 @@ const Navbar = () => {
     window.addEventListener('scroll', handleScroll)
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
-
-  const navLinks = [
-    { title: 'Home', href: '#home', icon: Home },
-    { title: 'About', href: '#inside', icon: Info },
-
-    { title: 'Award Categories', href: '#awards', icon: Award },
-    { title: 'Core Team', href: '#team', icon: Users },
-    { title: 'Journey', href: '#journey', icon: Map },
-    { title: 'Jury & Support', href: '#support', icon: Scale },
-    { title: 'Archives', href: '#previous', icon: Trophy },
-    { title: 'Hall of Fame', href: '#winners', icon: Medal },
-    { title: 'Be Part of it', href: '#bepart', icon: Award },
-  ]
 
   const toggleMenu = () => setIsOpen(!isOpen)
 
@@ -49,7 +48,7 @@ const Navbar = () => {
             onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
           >
             <div className="relative flex items-center gap-5">
-              <img src={logo} alt="KPMG" className="h-8 w-auto relative z-10" />
+              <img src={globals.logoUrl} alt="KPMG" className="h-8 w-auto relative z-10" />
               <div className="absolute inset-0 bg-[#ACEAFF]/20 blur-md rounded-full scale-0 group-hover:scale-150 transition-transform duration-500" />
             </div>
           </motion.div>
@@ -57,7 +56,7 @@ const Navbar = () => {
           {/* Action Buttons & Burger */}
           <div className="flex items-center gap-4">
             <button className="hidden xl:block px-8 py-3 bg-white/5 backdrop-blur-md border border-[#ACEAFF]/30 hover:border-[#ACEAFF] text-white rounded-full text-[10px] font-black uppercase tracking-[0.2em] transition-all hover:shadow-[0_0_20px_rgba(172,234,255,0.3)] active:scale-95 whitespace-nowrap">
-              Nominations Open
+              {globals.nominationCta}
             </button>
             <button
               onClick={toggleMenu}
@@ -92,7 +91,7 @@ const Navbar = () => {
             >
               <div className="flex justify-between items-center mb-10 shrink-0">
                 <div className="flex items-center gap-3">
-                  <span className="text-xl font-black text-white uppercase tracking-[0.2em]">Menu</span>
+                  <span className="text-xl font-black text-white uppercase tracking-[0.2em]">{globals.menuTitle}</span>
                 </div>
                 <button onClick={toggleMenu} className="p-3 bg-white/5 hover:bg-white/10 rounded-full transition-all group">
                   <X size={24} className="text-white group-hover:rotate-90 transition-transform duration-300" />
@@ -100,37 +99,40 @@ const Navbar = () => {
               </div>
 
               <div className="flex flex-col gap-2">
-                {navLinks.map((link, idx) => (
-                  <motion.a
-                    key={link.title}
-                    href={link.href}
-                    onClick={toggleMenu}
-                    initial={{ opacity: 0, x: 20 }}
-                    animate={{ opacity: 1, x: 0 }}
-                    transition={{ delay: idx * 0.03 }}
-                    className="flex items-center gap-6 py-2.5 group transition-all"
-                  >
-                    <motion.div
-                      whileHover={{ scale: 1.1 }}
-                      className="text-white/40 group-hover:text-[#ACEAFF] transition-colors shrink-0"
+                {globals.navLinks.map((link, idx) => {
+                  const Icon = ICON_MAP[link.icon] || Info
+                  return (
+                    <motion.a
+                      key={link.title}
+                      href={link.href}
+                      onClick={toggleMenu}
+                      initial={{ opacity: 0, x: 20 }}
+                      animate={{ opacity: 1, x: 0 }}
+                      transition={{ delay: idx * 0.03 }}
+                      className="flex items-center gap-6 py-2.5 group transition-all"
                     >
-                      <link.icon size={20} strokeWidth={2.5} />
-                    </motion.div>
-                    <span className="text-lg font-bold text-white/60 group-hover:text-white transition-colors tracking-tight">
-                      {link.title}
-                    </span>
-                  </motion.a>
-                ))}
+                      <motion.div
+                        whileHover={{ scale: 1.1 }}
+                        className="text-white/40 group-hover:text-[#ACEAFF] transition-colors shrink-0"
+                      >
+                        <Icon size={20} strokeWidth={2.5} />
+                      </motion.div>
+                      <span className="text-lg font-bold text-white/60 group-hover:text-white transition-colors tracking-tight">
+                        {link.title}
+                      </span>
+                    </motion.a>
+                  )
+                })}
               </div>
 
               <div className="mt-8 pt-8 border-t border-white/10 shrink-0">
                 <button className="w-full py-5 bg-white/5 backdrop-blur-md border border-[#ACEAFF]/30 hover:border-[#1E49E2] text-white rounded-2xl font-black uppercase tracking-[0.3em] transition-all hover:shadow-[0_0_30px_rgba(172,234,255,0.4)] active:scale-95 text-[11px]">
-                  Nominations Open
+                  {globals.nominationCta}
                 </button>
                 <div className="flex items-center justify-center gap-6 mt-8 opacity-40">
-                  <span className="text-[10px] font-bold uppercase tracking-widest text-[#ACEAFF]">2026 i-Recognize</span>
+                  <span className="text-[10px] font-bold uppercase tracking-widest text-[#ACEAFF]">{globals.footerBrand}</span>
                   <div className="w-1.5 h-1.5 bg-white rounded-full" />
-                  <span className="text-[10px] font-bold uppercase tracking-widest text-white">KPMG</span>
+                  <span className="text-[10px] font-bold uppercase tracking-widest text-white">{globals.footerCorp}</span>
                 </div>
               </div>
             </motion.div>

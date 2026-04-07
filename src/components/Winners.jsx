@@ -48,10 +48,10 @@ const Winners = () => {
             viewport={{ once: true }}
             className="text-[11px] font-black uppercase tracking-[0.3em] mb-4 text-[#1E49E2]"
           >
-            Hall of Fame
+            {winners.badge}
           </motion.p>
           <motion.h2 className="gsap-reveal text-4xl md:text-5xl font-black text-[#0C233C] tracking-tighter mb-6">
-            Past Edition Winners
+            {winners.title}
           </motion.h2>
 
           {/* Year Tabs (matching video) */}

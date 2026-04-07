@@ -65,7 +65,7 @@ const Timeline = () => {
             viewport={{ once: true }}
             className="text-[11px] font-black uppercase tracking-[0.3em] mb-4 text-[#1E49E2]"
           >
-            {journey.badge || "THE PROCESS"}
+            {journey.badge}
           </motion.p>
           <motion.h2
             initial={{ opacity: 0, y: 20 }}

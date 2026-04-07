@@ -14,17 +14,17 @@ import siteData from '../data/site-content.json'
 
 const AwardCard = ({ category, idx }) => {
   const icons = {
-    "Creative Spark": Sparkles,
-    "Result Momentum": TrendingUp,
-    "Story Clarity": BookOpen,
-    "Collective Choice": Users,
-    "Motion Flow": Move,
-    "Content Impact": FileText,
-    "Digital Velocity": Zap,
-    "Design Brilliance": Palette,
+    "Sparkles": Sparkles,
+    "TrendingUp": TrendingUp,
+    "BookOpen": BookOpen,
+    "Users": Users,
+    "Move": Move,
+    "FileText": FileText,
+    "Zap": Zap,
+    "Palette": Palette,
   }
 
-  const Icon = icons[category.title] || Zap
+  const Icon = icons[category.icon] || Zap
 
   return (
     <motion.div
@@ -75,7 +75,7 @@ const Awards = () => {
             viewport={{ once: true }}
             className="text-[11px] font-black uppercase tracking-[0.3em] mb-4 text-[#ACEAFF]"
           >
-            Award Categories
+            {awards.badge}
           </motion.p>
           
           <motion.h2

@@ -23,8 +23,9 @@ const InfoCards = () => {
             style={{ willChange: 'transform, opacity' }}
             className="group flex flex-col justify-between h-full p-8 bg-white/10 backdrop-blur-3xl border border-white/10 rounded-t-[24px] rounded-b-none transition-all hover:bg-white/15 h-full cursor-pointer shadow-2xl"
             onClick={() => {
-              const hrefs = ['#inside', '#journey', '#previous'];
-              window.location.hash = hrefs[idx];
+              if (card.href) {
+                window.location.hash = card.href;
+              }
             }}
           >
             <div>

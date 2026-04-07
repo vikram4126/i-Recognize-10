@@ -3,7 +3,7 @@ import { motion } from 'framer-motion'
 import siteData from '../data/site-content.json'
 
 const SectionIntro = () => {
-  const { intro } = siteData
+  const { sectionIntro } = siteData
 
   return (
     <section id="inside" className="relative py-20 bg-white overflow-hidden text-center">
@@ -17,7 +17,7 @@ const SectionIntro = () => {
             viewport={{ once: true }}
             className="text-[11px] font-black uppercase tracking-[0.3em] mb-4 text-[#1E49E2]"
           >
-            Corporate Excellence
+            {sectionIntro.badge}
           </motion.p>
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
@@ -25,7 +25,7 @@ const SectionIntro = () => {
             viewport={{ once: true }}
             className="gsap-reveal text-4xl md:text-5xl font-black text-[#0C233C] tracking-tighter mb-6"
           >
-            About the platform
+            {sectionIntro.title}
           </motion.h2>
           
           <motion.div
@@ -36,15 +36,14 @@ const SectionIntro = () => {
             className="max-w-3xl mx-auto"
           >
             <p className="text-lg md:text-xl font-medium text-[#0C233C]/80 leading-relaxed tracking-tight mb-8">
-              "i-Recognize" is the flagship KPMG platform where collaboration takes flight. We honor teams that move with the precision and speed of a hummingbird, creating global impact.
+              "{sectionIntro.quote}"
             </p>
             <div className="flex flex-col md:flex-row gap-6 md:gap-12 text-sm font-medium text-[#0C233C]/60 leading-relaxed">
-              <p className="flex-1">
-                Our approach ensures every story of success is documented with corporate rigor and artistic flair, reflecting the core values of KPMG.
-              </p>
-              <p className="flex-1">
-                Through structured showcases reviewed by a jury, impactful work is recognized across defined categories as part of the platform experience.
-              </p>
+              {sectionIntro.paragraphs.map((p, idx) => (
+                <p key={idx} className="flex-1">
+                  {p}
+                </p>
+              ))}
             </div>
           </motion.div>
         </div>

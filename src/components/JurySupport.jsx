@@ -43,12 +43,12 @@ const JurySupport = () => {
             viewport={{ once: true }}
             className="text-[11px] font-black uppercase tracking-[0.3em] mb-4 text-[#1E49E2]"
           >
-            People Behind the Process
+            {support.badge}
           </motion.p>
           <motion.h2
             className="gsap-reveal text-4xl md:text-5xl font-black text-[#0C233C] tracking-tighter mb-6"
           >
-            Jury & SPOC Support
+            {support.title}
           </motion.h2>
         </div>
 

@@ -3,16 +3,6 @@ import { motion, AnimatePresence } from 'framer-motion'
 import { X, ExternalLink } from 'lucide-react'
 import siteData from '../data/site-content.json'
 
-import p2023 from '../assets/previous-2023.JPG'
-import p2024 from '../assets/previous-2024.JPG'
-import p2025 from '../assets/previous-2025.JPG'
-
-const assetMap = {
-  "previous-2023.JPG": p2023,
-  "previous-2024.JPG": p2024,
-  "previous-2025.JPG": p2025,
-}
-
 const PreviousEditions = () => {
   const [selectedEdition, setSelectedEdition] = useState(null)
   const { archival } = siteData
@@ -29,7 +19,7 @@ const PreviousEditions = () => {
             viewport={{ once: true }}
             className="text-[11px] font-black uppercase tracking-[0.3em] mb-4 text-[#1E49E2]"
           >
-            Archival Highlights
+            {archival.badge}
           </motion.p>
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
@@ -78,9 +68,9 @@ const PreviousEditions = () => {
                 <X size={20} />
               </button>
               <div className="h-64 md:h-full overflow-hidden">
-                <img src={assetMap[selectedEdition.img]} alt={selectedEdition.year} className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700" />
+                <img src={selectedEdition.img} alt={selectedEdition.year} className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700" />
               </div>
-              <div className="p-10 md:p-16 flex flex-col justify-center">
+              <div className="p-10 md:p-16 flex flex-col justify-center text-left">
                 <span className="text-[#1E49E2] text-[10px] font-black uppercase tracking-widest mb-4 italic">Edition Archive</span>
                 <h2 className="text-4xl font-black text-[#0C233C] mb-2 tracking-tight">{selectedEdition.year}</h2>
                 <p className="text-[#1E49E2] font-black text-lg mb-6">{selectedEdition.title}</p>
@@ -93,7 +83,7 @@ const PreviousEditions = () => {
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-3 px-8 py-4 bg-[#1E49E2] text-white rounded-full font-black text-[11px] uppercase tracking-widest hover:bg-[#0C233C] shadow-xl transition-all"
                 >
-                  Visit Gallery <ExternalLink size={14} />
+                  {archival.cta} <ExternalLink size={14} />
                 </a>
               </div>
             </motion.div>
