@@ -45,7 +45,7 @@ const AwardCard = ({ category, idx }) => {
           <Icon size={20} strokeWidth={2.5} />
         </div>
         
-        <h3 className="text-xl font-semibold text-white mb-4 tracking-tight uppercase leading-tight group-hover:text-[#ACEAFF] transition-colors">
+        <h3 className="text-xl font-semibold text-white mb-4 tracking-tight leading-tight group-hover:text-[#ACEAFF] transition-colors">
           {category.title}
         </h3>
         
