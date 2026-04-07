@@ -1,0 +1,87 @@
+// ─── Design Tokens (Hardcoded Milestone C) ─────────────────────────
+// Reverted to static corporate branding. No dynamic theme variables.
+
+// Global SCSS Variables for internal use
+$color-primary: #00338D;
+$color-primary-medium: #1E49E2;
+$color-primary-dark: #0C233C;
+$color-primary-light: #00B8F5;
+$color-purple: #7213EA;
+$color-pink: #FD349C;
+$color-sky: #ACEAFF;
+$color-surface: #F5F7FA;
+$color-white: #FFFFFF;
+
+// ─── Base ────────────────────────────────────────────────────
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  background-color: #0C233C;
+  color: #0C233C;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Inter', sans-serif;
+  font-weight: 800;
+}
+
+// ─── Buttons ─────────────────────────────────────────────────
+.btn-primary {
+  padding: 12px 32px;
+  background: $color-primary;
+  color: $color-white;
+  border-radius: 9999px;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+
+  &:hover {
+    background: $color-primary-medium;
+    box-shadow: 0 8px 24px rgba(0, 51, 141, 0.3);
+    transform: translateY(-2px);
+  }
+
+  &:active {
+    transform: scale(0.95);
+  }
+}
+
+.btn-secondary {
+  padding: 12px 32px;
+  background: $color-white;
+  color: $color-primary;
+  border: 1px solid rgba(0, 51, 141, 0.2);
+  border-radius: 9999px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+
+  &:hover {
+    background: rgba(0, 51, 141, 0.05);
+    border-color: rgba(0, 51, 141, 0.4);
+    box-shadow: 0 4px 16px rgba(0, 51, 141, 0.1);
+    transform: translateY(-2px);
+  }
+
+  &:active {
+    transform: scale(0.95);
+  }
+}

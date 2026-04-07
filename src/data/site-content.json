@@ -1,0 +1,185 @@
+{
+  "hero": {
+    "badge": "A KPMG Initiative",
+    "title": "i-Recognize",
+    "subtitle": "Small moves. Powerful impact. Celebrating the agility and precision of global excellence across KPMG.",
+    "ctaLabel": "Reserve Your Seat",
+    "timerLabel": "Event Starts In",
+    "targetDate": "April 23, 2026 00:00:00"
+  },
+  "infoCards": [
+    {
+      "title": "About i-Recognize",
+      "text": "Discover our vision for excellence and how we identify the spark in everyday collaboration.",
+      "cta": "Learn More"
+    },
+    {
+      "title": "The Journey",
+      "text": "From first nomination to the grand stage, follow the path of prestige and growth.",
+      "cta": "View Path"
+    },
+    {
+      "title": "Previous Editions",
+      "text": "Relive the moments of brilliance that have defined our legacy over the years.",
+      "cta": "Explore"
+    }
+  ],
+  "sectionIntro": {
+    "badge": "Corporate Excellence",
+    "title": "About the platform",
+    "quote": "i-Recognize is the flagship KPMG platform where collaboration takes flight. We honor teams that move with the precision and speed of a hummingbird, creating global impact.",
+    "paragraphs": [
+      "Our approach ensures every story of success is documented with corporate rigor and artistic flair, reflecting the core values of KPMG.",
+      "Through structured showcases reviewed by a jury, impactful work is recognized across defined categories as part of the platform experience."
+    ]
+  },
+  "awards": {
+    "title": "Award Categories",
+    "subtitle": "Celebrating excellence across 8 core categories that define the spirit of innovation and collective impact at i-Recognize.",
+    "categories": [
+      {
+        "title": "Design Brilliance",
+        "icon": "Palette",
+        "text": "Recognizes work where thoughtful design and strong visual consistency come together, showcasing craftsmanship and purposeful execution.",
+        "color": "text-[#00B8F5]",
+        "bg": "bg-[#00B8F5]/10"
+      },
+      {
+        "title": "Digital Velocity",
+        "icon": "Zap",
+        "text": "Recognizes projects delivered with speed and agility to adapt quickly to change while maintaining quality, balance, and impact.",
+        "color": "text-[#F5A623]",
+        "bg": "bg-[#F5A623]/10"
+      },
+      {
+        "title": "Content Impact",
+        "icon": "FileText",
+        "text": "Acknowledges communicables that tell a powerful, clear, and concise story, driving and inspiring meaningful action.",
+        "color": "text-[#FD349C]",
+        "bg": "bg-[#FD349C]/10"
+      },
+      {
+        "title": "Motion Flow",
+        "icon": "Move",
+        "text": "Recognizes projects where motion and transitions were used purposefully to elevate the user experience effortlessly.",
+        "color": "text-[#7213EA]",
+        "bg": "bg-[#7213EA]/10"
+      },
+      {
+        "title": "Creative Spark",
+        "icon": "Sparkles",
+        "text": "Acknowledges new ideas and fresh approaches - where curiosity, clarity, and intent sparked meaningful innovation.",
+        "color": "text-[#50E3C2]",
+        "bg": "bg-[#50E3C2]/10"
+      },
+      {
+        "title": "Result Momentum",
+        "icon": "TrendingUp",
+        "text": "Recognizes a body of work with measurable impact - built through steady and consistent effort over time.",
+        "color": "text-[#4A90E2]",
+        "bg": "bg-[#4A90E2]/10"
+      },
+      {
+        "title": "Story Clarity",
+        "icon": "BookOpen",
+        "text": "Recognizes work that connected with clarity and emotional resonance. Impactful stories that convey complex ideas engage easily.",
+        "color": "text-[#E84B1E]",
+        "bg": "bg-[#E84B1E]/10"
+      },
+      {
+        "title": "Collective Choice",
+        "icon": "Users",
+        "text": "Recognizes work that connected across teams, fostering strong collaboration and collective success across diverse organizational functions.",
+        "color": "text-[#ACEAFF]",
+        "bg": "bg-[#ACEAFF]/10"
+      }
+    ]
+  },
+  "journey": {
+    "badge": "THE PROCESS",
+    "title": "Roadmap to Recognition",
+    "steps": [
+      { "title": "Spotting Impact", "content": "Identifying teams and projects that have made a significant difference within the organization." },
+      { "title": "Self Nomination", "content": "Teams submit their work through a structured process, highlighting key achievements and outcomes." },
+      { "title": "Initial Review", "content": "A preliminary review by the core committee to ensure alignment with defined categories." },
+      { "title": "Shortlisting", "content": "Jury members review the nominations to shortlist the most impactful work across categories." },
+      { "title": "Live Showcase", "content": "Shortlisted teams present their work to the organization, sharing learnings and approaches." },
+      { "title": "Final Evaluation", "content": "Jury members convene to decide on the final winners based on predefined evaluation criteria." },
+      { "title": "Recognition Ceremony", "content": "The journey culminates in a celebration where impactful work is recognized and rewarded." }
+    ]
+  },
+  "theme": {
+    "titlePrefix": "THE",
+    "titleMain": "HUMMINGBIRD",
+    "description": "The hummingbird represents focus and consistency - a reminder that impactful work is driven by precision and sustained effort. Small actions, repeated with intentional focus, create ripples of change. This spirit defines the core of i-Recognize 2026."
+  },
+  "support": {
+    "juryTitle": "The Jury",
+    "spocTitle": "SPOC Support",
+    "juryMembers": [
+      { "name": "Amitabh", "role": "Partner", "img": "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&q=80&w=150" },
+      { "name": "Sonal", "role": "Director", "img": "https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&q=80&w=150" },
+      { "name": "Vikram", "role": "Senior Partner", "img": "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&q=80&w=150" },
+      { "name": "Pooja", "role": "Head of Ops", "img": "https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?auto=format&fit=crop&q=80&w=150" }
+    ],
+    "spocMembers": [
+      { "name": "Rahul", "dpt": "Digital Unit", "img": "https://images.unsplash.com/photo-1599566150163-29194dcaad36?auto=format&fit=crop&q=80&w=150" },
+      { "name": "Deepa", "dpt": "Strategy Unit", "img": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&q=80&w=150" },
+      { "name": "Kunal", "dpt": "Delivery Unit", "img": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=150" },
+      { "name": "Mehak", "dpt": "Admin Unit", "img": "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&q=80&w=150" }
+    ]
+  },
+  "archival": {
+    "title": "ARCHIVAL HIGHLIGHTS",
+    "cta": "Explore Full Archives",
+    "editions": [
+      {
+        "year": "2023",
+        "title": "Aura Edition",
+        "img": "previous-2023.JPG",
+        "link": "https://edition.kpmg.com/2023"
+      },
+      {
+        "year": "2024",
+        "title": "Velocity Edition",
+        "img": "previous-2024.JPG",
+        "link": "https://edition.kpmg.com/2024"
+      },
+      {
+        "year": "2025",
+        "title": "Pulse Edition",
+        "img": "previous-2025.JPG",
+        "link": "https://edition.kpmg.com/2025"
+      }
+    ]
+  },
+  "winners": {
+    "badge": "HALL OF EXCELLENCE",
+    "title": "Hall of Fame Highlights",
+    "years": ["2025", "2024", "2023"],
+    "byYear": {
+      "2025": [
+        { "name": "Alpha Digital Squad", "team": "Digital Services", "award": "Digital Velocity Winner 2025", "img": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=600&h=750" },
+        { "name": "Creative Flow Collective", "team": "Design Studio", "award": "Design Brilliance Winner 2025", "img": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&q=80&w=600&h=750" },
+        { "name": "Project Keystone", "team": "Delivery Excellence", "award": "Result Momentum Winner 2025", "img": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&q=80&w=600&h=750" },
+        { "name": "The Visionaries", "team": "Strategy & Growth", "award": "Story Clarity Winner 2025", "img": "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&q=80&w=600&h=750" },
+        { "name": "Spark Labs", "team": "Innovation Hub", "award": "Creative Spark Winner 2025", "img": "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&q=80&w=600&h=750" },
+        { "name": "Storytellers Unit", "team": "Content & Communication", "award": "Content Impact Winner 2025", "img": "https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&q=80&w=600&h=750" },
+        { "name": "Fluid UX Team", "team": "Experience Design", "award": "Motion Flow Winner 2025", "img": "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&q=80&w=600&h=750" },
+        { "name": "Synergy Core", "team": "Cross-Functional Ops", "award": "Collective Choice Winner 2025", "img": "https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?auto=format&fit=crop&q=80&w=600&h=750" }
+      ],
+      "2024": [
+        { "name": "Alpha Digital Squad", "team": "Digital Services", "award": "Digital Velocity Winner 2024", "img": "https://images.unsplash.com/photo-1599566150163-29194dcaad36?auto=format&fit=crop&q=80&w=600&h=750" },
+        { "name": "Creative Flow Collective", "team": "Design Studio", "award": "Design Brilliance Winner 2024", "img": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=600&h=750" },
+        { "name": "Project Keystone", "team": "Delivery Excellence", "award": "Result Momentum Winner 2024", "img": "https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&q=80&w=600&h=750" },
+        { "name": "The Visionaries", "team": "Strategy & Growth", "award": "Story Clarity Winner 2024", "img": "https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&q=80&w=600&h=750" }
+      ],
+      "2023": [
+        { "name": "Catalyst Team", "team": "Advisory", "award": "Creative Spark Winner 2023", "img": "https://images.unsplash.com/photo-1537368910025-700350fe46c7?auto=format&fit=crop&q=80&w=600&h=750" },
+        { "name": "Momentum Group", "team": "Audit & Assurance", "award": "Result Momentum Winner 2023", "img": "https://images.unsplash.com/photo-1614644147798-f8c0fc9da7f6?auto=format&fit=crop&q=80&w=600&h=750" },
+        { "name": "ClearVoice Ops", "team": "Tax & Legal", "award": "Story Clarity Winner 2023", "img": "https://images.unsplash.com/photo-1573497491765-dccce02b29df?auto=format&fit=crop&q=80&w=600&h=750" },
+        { "name": "Pulse Digital", "team": "Technology Unit", "award": "Digital Velocity Winner 2023", "img": "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&q=80&w=600&h=750" }
+      ]
+    }
+  }
+}
