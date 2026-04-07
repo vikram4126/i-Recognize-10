@@ -91,22 +91,43 @@ const Hero = () => {
         <div className="relative z-10 flex-1 flex flex-col items-center justify-center pt-32 pb-8 lg:pt-0 lg:pb-[250px] px-6">
           <div className="flex flex-col items-center text-center gap-8 max-w-5xl mx-auto">
             
-            {/* Title */}
-            <motion.h1
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-              className="text-5xl md:text-7xl lg:text-9xl font-condensed font-bold tracking-tight text-white leading-[0.9] drop-shadow-2xl"
-            >
-              {hero.title}
-            </motion.h1>
+            {/* Title & Tagline Group */}
+            <div className="flex flex-col items-center justify-center gap-1 md:gap-2 mb-2">
+              <motion.h1
+                initial={{ opacity: 0, y: 30 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
+                className="text-6xl md:text-7xl lg:text-9xl font-condensed font-bold tracking-tight text-white leading-[0.9] drop-shadow-2xl flex items-baseline"
+              >
+                <span className="relative inline-block">
+                  <motion.span
+                    initial={{ scale: 0, opacity: 0 }}
+                    animate={{ scale: 1, opacity: 1 }}
+                    transition={{ delay: 0.8, duration: 0.6, type: "spring", bounce: 0.5 }}
+                    className="absolute top-[0.05em] left-[50%] -translate-x-1/2 w-[0.14em] h-[0.14em] bg-[#FD349C] z-10"
+                  />
+                  i
+                </span>
+                -Recognize
+              </motion.h1>
+
+              {/* Tagline */}
+              <motion.h2
+                 initial={{ opacity: 0, y: 20 }}
+                 animate={{ opacity: 1, y: 0 }}
+                 transition={{ duration: 0.8, delay: 0.4 }}
+                 className="text-xl md:text-2xl lg:text-3xl font-semibold tracking-[0.2em] text-white/90 font-sans mt-2"
+              >
+                 Be Free to Create
+              </motion.h2>
+            </div>
 
             {/* Subtitle */}
             <motion.p
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
-              className="text-base md:text-lg text-white/70 max-w-2xl mx-auto font-normal leading-relaxed tracking-wide"
+              transition={{ duration: 0.8, delay: 0.6 }}
+              className="text-sm md:text-base lg:text-lg text-white/70 max-w-2xl mx-auto font-normal leading-relaxed tracking-wide"
             >
               {hero.subtitle}
             </motion.p>
