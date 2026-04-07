@@ -87,39 +87,44 @@ const Hero = () => {
           <div className="absolute inset-0 bg-[#00338D]/30" /> 
         </div>
 
-        {/* Hero Content — Centered with bottom padding for absolute cards */}
-        <div className="relative z-10 flex-1 flex flex-col items-center justify-center pt-32 pb-8 lg:pt-0 lg:pb-[250px] px-6">
-          <div className="flex flex-col items-center text-center gap-8 max-w-5xl mx-auto">
+        {/* Hero Content */}
+        <div className="relative z-10 flex-1 flex flex-col items-center justify-center pt-32 pb-32 lg:pt-16 lg:pb-[260px] px-6">
+          <div className="flex flex-col items-center text-center gap-6 lg:gap-8 max-w-5xl mx-auto w-full">
             
             {/* Title & Tagline Group */}
-            <div className="flex flex-col items-center justify-center gap-1 md:gap-2 mb-2">
+            <div className="flex flex-col items-center justify-center mb-4">
               <motion.h1
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-                className="text-6xl md:text-7xl lg:text-9xl font-condensed font-bold tracking-tight text-white leading-[0.9] drop-shadow-2xl flex items-baseline"
+                className="relative text-5xl md:text-6xl lg:text-8xl font-condensed font-bold tracking-tight text-white leading-[0.9] drop-shadow-2xl flex items-baseline"
               >
                 <span className="relative inline-block">
-                  <motion.span
+                  <motion.div
                     initial={{ scale: 0, opacity: 0 }}
                     animate={{ scale: 1, opacity: 1 }}
                     transition={{ delay: 0.8, duration: 0.6, type: "spring", bounce: 0.5 }}
-                    className="absolute top-[0.05em] left-[50%] -translate-x-1/2 w-[0.14em] h-[0.14em] bg-[#FD349C] z-10"
+                    className="absolute bottom-[92%] left-[53%] -translate-x-1/2 ml-[1px] w-[calc(0.13em+1px)] h-[calc(0.13em+1px)] bg-[#FD349C] z-10"
                   />
-                  i
+                  I
                 </span>
-                -Recognize
+                <span>-</span>
+                <span className="relative inline-block">
+                  <div className="hidden absolute bottom-[100%] left-0 mb-[0.04em] h-[0.14em] items-center pointer-events-none">
+                    <motion.span
+                      initial={{ opacity: 0, x: -10 }}
+                      animate={{ opacity: 1, x: 0 }}
+                      transition={{ duration: 0.8, delay: 0.4 }}
+                      className="font-sans uppercase whitespace-nowrap text-white/90"
+                      style={{ fontSize: "0.14em", fontWeight: 400, letterSpacing: "0.33em" }}
+                    >
+                      BE FREE TO CREATE
+                    </motion.span>
+                  </div>
+                  R
+                </span>
+                <span>ecognize</span>
               </motion.h1>
-
-              {/* Tagline */}
-              <motion.h2
-                 initial={{ opacity: 0, y: 20 }}
-                 animate={{ opacity: 1, y: 0 }}
-                 transition={{ duration: 0.8, delay: 0.4 }}
-                 className="text-xl md:text-2xl lg:text-3xl font-semibold tracking-[0.2em] text-white/90 font-sans mt-2"
-              >
-                 Be Free to Create
-              </motion.h2>
             </div>
 
             {/* Subtitle */}
@@ -127,10 +132,25 @@ const Hero = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.6 }}
-              className="text-sm md:text-base lg:text-lg text-white/70 max-w-2xl mx-auto font-normal leading-relaxed tracking-wide"
+              className="text-lg md:text-xl lg:text-2xl text-white/80 max-w-3xl mx-auto font-light leading-relaxed tracking-wide mb-2 whitespace-pre-line"
             >
               {hero.subtitle}
             </motion.p>
+
+            {/* CTA Buttons */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.7 }}
+              className="flex flex-col sm:flex-row items-center justify-center gap-4 mt-2 mb-6"
+            >
+              <button className="px-8 py-3.5 bg-gradient-to-r from-[#FD349C] to-[#7213EA] text-white font-medium rounded-full shadow-[0_0_20px_rgba(253,52,156,0.3)] hover:shadow-[0_0_30px_rgba(253,52,156,0.5)] hover:-translate-y-0.5 transition-all duration-300">
+                Inside I-Recognize
+              </button>
+              <button className="px-8 py-3.5 bg-white/5 backdrop-blur-sm border border-white/20 text-white font-medium rounded-full hover:bg-white/10 hover:border-white/40 hover:-translate-y-0.5 transition-all duration-300">
+                See Impact In Motion
+              </button>
+            </motion.div>
 
             {/* Countdown Timer — Dark & Compact */}
             <motion.div
@@ -138,25 +158,25 @@ const Hero = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 1, delay: 0.4 }}
             >
-              <div className="flex items-center gap-4 md:gap-8 px-8 py-4 bg-black/40 backdrop-blur-2xl border border-white/10 rounded-full shadow-2xl">
+              <div className="flex items-center gap-3 md:gap-6 px-6 py-3 bg-black/40 backdrop-blur-2xl border border-white/10 rounded-full shadow-2xl mb-8">
                 <div className="flex flex-col items-center">
-                  <span className="text-2xl md:text-4xl font-black text-white leading-none mb-1">{formatNumber(timeLeft.days)}</span>
-                  <span className="text-[10px] font-black text-[#ACEAFF] uppercase tracking-widest">{hero.timerUnits.days}</span>
+                  <span className="text-xl md:text-3xl font-black text-white leading-none mb-1">{formatNumber(timeLeft.days)}</span>
+                  <span className="text-[9px] font-bold text-[#ACEAFF] uppercase tracking-widest">{hero.timerUnits.days}</span>
                 </div>
-                <span className="text-xl md:text-2xl font-black text-white/10 -mt-3">:</span>
+                <span className="text-lg md:text-xl font-black text-white/10 -mt-2">:</span>
                 <div className="flex flex-col items-center">
-                  <span className="text-2xl md:text-4xl font-black text-white leading-none mb-1">{formatNumber(timeLeft.hours)}</span>
-                  <span className="text-[10px] font-black text-[#ACEAFF] uppercase tracking-widest">{hero.timerUnits.hours}</span>
+                  <span className="text-xl md:text-3xl font-black text-white leading-none mb-1">{formatNumber(timeLeft.hours)}</span>
+                  <span className="text-[9px] font-bold text-[#ACEAFF] uppercase tracking-widest">{hero.timerUnits.hours}</span>
                 </div>
-                <span className="text-xl md:text-2xl font-black text-white/10 -mt-3">:</span>
+                <span className="text-lg md:text-xl font-black text-white/10 -mt-2">:</span>
                 <div className="flex flex-col items-center">
-                  <span className="text-2xl md:text-4xl font-black text-white leading-none mb-1">{formatNumber(timeLeft.minutes)}</span>
-                  <span className="text-[10px] font-black text-[#ACEAFF] uppercase tracking-widest">{hero.timerUnits.minutes}</span>
+                  <span className="text-xl md:text-3xl font-black text-white leading-none mb-1">{formatNumber(timeLeft.minutes)}</span>
+                  <span className="text-[9px] font-bold text-[#ACEAFF] uppercase tracking-widest">{hero.timerUnits.minutes}</span>
                 </div>
-                <span className="text-xl md:text-2xl font-black text-white/10 -mt-3 md:flex hidden">:</span>
+                <span className="text-lg md:text-xl font-black text-white/10 -mt-2 md:flex hidden">:</span>
                 <div className="md:flex hidden flex-col items-center">
-                  <span className="text-2xl md:text-4xl font-black text-white/40 leading-none mb-1">{formatNumber(timeLeft.seconds)}</span>
-                  <span className="text-[10px] font-black text-[#ACEAFF]/50 uppercase tracking-widest">{hero.timerUnits.seconds}</span>
+                  <span className="text-xl md:text-3xl font-black text-white/40 leading-none mb-1">{formatNumber(timeLeft.seconds)}</span>
+                  <span className="text-[9px] font-bold text-[#ACEAFF]/50 uppercase tracking-widest">{hero.timerUnits.seconds}</span>
                 </div>
               </div>
             </motion.div>
